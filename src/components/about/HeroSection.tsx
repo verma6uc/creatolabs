@@ -54,7 +54,7 @@ export function HeroSection() {
             About CreatorLabs
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-12">
-            Meet the team behind the AI-driven website builder that's revolutionizing web development.
+            Meet the team behind the AI-driven website builder that&apos;s revolutionizing web development.
           </p>
           <button className="btn-primary text-lg">
             Get Started

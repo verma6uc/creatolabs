@@ -79,7 +79,7 @@ export function StepBasicInfo({ data, setData, onNext }: StepProps) {
     <form onSubmit={handleSubmit} className="space-y-8">
       <div className="space-y-2">
         <label htmlFor="email" className="block text-white font-medium">
-          What's your email?
+          What&apos;s your email?
         </label>
         <input
           type="email"
@@ -96,7 +96,7 @@ export function StepBasicInfo({ data, setData, onNext }: StepProps) {
           <p className="text-red-500 text-sm mt-1">{errors.email}</p>
         )}
         <p className="text-white/60 text-sm">
-          We'll use this to send you updates about your website.
+          We&apos;ll use this to send you updates about your website.
         </p>
       </div>
 

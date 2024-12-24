@@ -161,7 +161,7 @@ export function StepPagesStructure({ data, setData, onNext, onPrev }: StepProps)
           ))}
         </div>
         <p className="text-white/60 text-sm">
-          Optional: Select any additional pages you'd like to include.
+          Optional: Select any additional pages you&apos;d like to include.
         </p>
       </div>
 

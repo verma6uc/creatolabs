@@ -34,7 +34,7 @@ export const AIDrivenSection = () => {
               Act 1: Vision Meets AI
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Enter a world where your ideas shape themselves. Our AI engine listens to your brand's essence, then conjures a visually stunning layout in seconds.
+              Enter a world where your ideas shape themselves. Our AI engine listens to your brand&apos;s essence, then conjures a visually stunning layout in seconds.
             </p>
           </div>
 

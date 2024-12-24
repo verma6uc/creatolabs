@@ -54,7 +54,7 @@ export function FinalCTA() {
                 Want to Join Our Journey?
               </h2>
               <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12">
-                Whether you're a solo creator looking to transform your online presence or 
+                Whether you&apos;re a solo creator looking to transform your online presence or 
                 an enterprise seeking continuous growth, Creator Lab is here to evolve with you. 
                 Reach out to learn more—or jump right in!
               </p>

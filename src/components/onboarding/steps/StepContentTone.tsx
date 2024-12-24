@@ -28,7 +28,7 @@ const toneOptions: ToneOption[] = [
     id: 'casual',
     label: 'Casual & Friendly',
     description: 'Approachable and conversational',
-    example: "Hey there! Let's create something amazing together.",
+    example: "Hey there! Let&apos;s create something amazing together.",
   },
   {
     id: 'quirky',
@@ -108,7 +108,7 @@ export function StepContentTone({ data, setData, onNext, onPrev }: StepProps) {
       {/* Brand Tone */}
       <div className="space-y-4">
         <label className="block text-white font-medium">
-          What is your brand's tone of voice?
+          What is your brand&apos;s tone of voice?
         </label>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {toneOptions.map((tone) => (
@@ -124,7 +124,7 @@ export function StepContentTone({ data, setData, onNext, onPrev }: StepProps) {
             >
               <h3 className="text-white font-medium mb-1">{tone.label}</h3>
               <p className="text-white/60 text-sm mb-2">{tone.description}</p>
-              <p className="text-white/80 text-sm italic">"{tone.example}"</p>
+              <p className="text-white/80 text-sm italic">&quot;{tone.example}&quot;</p>
             </button>
           ))}
         </div>
@@ -171,7 +171,7 @@ export function StepContentTone({ data, setData, onNext, onPrev }: StepProps) {
           </div>
         )}
         <p className="text-white/60 text-sm">
-          Optional: Add memorable phrases that capture your brand's essence.
+          Optional: Add memorable phrases that capture your brand&apos;s essence.
         </p>
       </div>
 

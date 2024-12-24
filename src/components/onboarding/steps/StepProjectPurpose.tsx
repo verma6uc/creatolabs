@@ -110,7 +110,7 @@ export function StepProjectPurpose({ data, setData, onNext, onPrev }: StepProps)
           <p className="text-red-500 text-sm mt-1">{errors.targetAudience}</p>
         )}
         <p className="text-white/60 text-sm">
-          This helps us tailor the content and design to your audience's preferences.
+          This helps us tailor the content and design to your audience&apos;s preferences.
         </p>
       </div>
 
