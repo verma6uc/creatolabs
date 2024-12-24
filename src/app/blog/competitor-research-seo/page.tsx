@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const CompetitorAnalysisSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Central Website */}
@@ -96,18 +94,18 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Beyond Traditional SEO</h2>
             <p className="text-white/90 leading-relaxed">
-              "During my time building enterprise systems at Microsoft," I (Vaibhav) share, 
-              "I noticed that most SEO tools were reactive rather than proactive. They'd tell 
+              &quot;During my time building enterprise systems at Microsoft,&quot; I (Vaibhav) share, 
+              &quot;I noticed that most SEO tools were reactive rather than proactive. They&apos;d tell 
               you what happened, but not what to do next. We wanted to change that fundamental 
-              approach."
+              approach.&quot;
             </p>
             
             <CompetitorAnalysisSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "By applying advanced AI algorithms to competitor analysis, we've 
-              created a system that doesn't just track competitors – it predicts their next 
-              moves and automatically adapts your site to stay ahead."
+              Sahil adds, &quot;By applying advanced AI algorithms to competitor analysis, we&apos;ve 
+              created a system that doesn&apos;t just track competitors – it predicts their next 
+              moves and automatically adapts your site to stay ahead.&quot;
             </p>
           </div>
 
@@ -117,20 +115,20 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Continuous Monitoring</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Traditional SEO tools give you weekly reports," I explain. "Our AI monitors 
+                  &quot;Traditional SEO tools give you weekly reports,&quot; I explain. &quot;Our AI monitors 
                   competitor changes in real-time. When a competitor updates their content 
                   strategy or targets new keywords, our system alerts you immediately and 
-                  suggests optimizations."
+                  suggests optimizations.&quot;
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Pattern Recognition</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "This is where my background in AI pattern recognition comes in," Sahil notes. 
-                  "Our system doesn't just look at keywords – it understands content strategy 
+                  &quot;This is where my background in AI pattern recognition comes in,&quot; Sahil notes. 
+                  &quot;Our system doesn&apos;t just look at keywords – it understands content strategy 
                   patterns across your entire competitive landscape, identifying gaps and 
-                  opportunities others might miss."
+                  opportunities others might miss.&quot;
                 </p>
               </div>
             </div>
@@ -140,16 +138,16 @@ export default function BlogPost() {
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Measurable Results</h2>
             <SEOMetricsSVG />
             <p className="text-white/90 leading-relaxed">
-              "The results speak for themselves," I share. "One of our early users saw their 
-              keyword rankings improve by 45% in just 30 days. But what's more impressive is 
-              how these improvements compound over time as our AI learns and adapts."
+              &quot;The results speak for themselves,&quot; I share. &quot;One of our early users saw their 
+              keyword rankings improve by 45% in just 30 days. But what&apos;s more impressive is 
+              how these improvements compound over time as our AI learns and adapts.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, "Each optimization creates a feedback loop. As we track the 
+              Sahil explains, &quot;Each optimization creates a feedback loop. As we track the 
               results, the AI becomes even better at predicting which changes will have the 
-              biggest impact. It's not just about ranking higher – it's about ranking for 
-              the right keywords that drive conversions."
+              biggest impact. It&apos;s not just about ranking higher – it&apos;s about ranking for 
+              the right keywords that drive conversions.&quot;
             </p>
           </div>
 
