@@ -1,0 +1,24 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Robot Head -->
+  <rect x="60" y="40" width="120" height="120" rx="20" stroke="#F2EEF4" stroke-width="8" class="animate-float"/>
+  
+  <!-- Antenna -->
+  <path d="M120 20v20M110 10l10 10 10-10" stroke="#F2EEF4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="80" r="15" fill="#F2EEF4"/>
+  <circle cx="150" cy="80" r="15" fill="#F2EEF4"/>
+  
+  <!-- Screen Mouth -->
+  <rect x="85" y="110" width="70" height="30" rx="8" stroke="#F2EEF4" stroke-width="4"/>
+  <path d="M95 125h50" stroke="#F2EEF4" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Color Palette -->
+  <circle cx="60" cy="200" r="20" fill="#6B4175" stroke="#F2EEF4" stroke-width="4"/>
+  <circle cx="120" cy="200" r="20" fill="#5C866D" stroke="#F2EEF4" stroke-width="4"/>
+  <circle cx="180" cy="200" r="20" fill="#8E7D93" stroke="#F2EEF4" stroke-width="4"/>
+  
+  <!-- Design Elements -->
+  <path d="M40 140l20-20M180 140l20-20" stroke="#F2EEF4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 160h-20M210 160h-20" stroke="#F2EEF4" stroke-width="4" stroke-linecap="round"/>
+</svg>
