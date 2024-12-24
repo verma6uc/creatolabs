@@ -50,7 +50,7 @@ export default function Timeline({ steps }: TimelineProps) {
         {/* Connecting Line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-sage-green/50 to-eggplant/50" />
 
-        {steps.map((step, _) => (
+        {steps.map((step) => (
           <div
             key={step.number}
             className="relative flex items-center mb-12 opacity-0 translate-y-8"
