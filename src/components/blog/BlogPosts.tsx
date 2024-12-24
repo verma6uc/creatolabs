@@ -7,6 +7,12 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    date: 'December 20, 2024',
+    title: 'Introducing CreatorLabs: The Future of Web Design is Here',
+    overview: 'After years of development and innovation, we\'re proud to announce the official launch of CreatorLabs, bringing AI-powered web design to everyone.',
+    slug: 'creator-labs-launch'
+  },
+  {
     date: 'October 1, 2024',
     title: 'How AI is Transforming the Web Design Landscape',
     overview: 'Overview of AI\'s role in modern web design, comparing traditional vs. AI-assisted site creation, and introducing our unique approach.',
