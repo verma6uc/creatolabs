@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const JourneySVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Journey Timeline */}
@@ -70,7 +68,7 @@ export default function BlogPost() {
             Introducing CreatorLabs: The Future of Web Design is Here
           </h1>
           <p className="text-xl text-white/80">
-            After years of development, we're proud to announce the launch of CreatorLabs
+            After years of development, we&apos;re proud to announce the launch of CreatorLabs
           </p>
         </header>
 
@@ -78,19 +76,19 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Journey to Launch</h2>
             <p className="text-white/90 leading-relaxed">
-              "Today marks a milestone in our journey," I (Vaibhav) share with excitement. "What 
+              &quot;Today marks a milestone in our journey,&quot; I (Vaibhav) share with excitement. &quot;What 
               started as a frustration with traditional web development at Microsoft has evolved 
-              into something revolutionary. Together with Sahil, we've transformed our vision of 
-              AI-powered web design into reality."
+              into something revolutionary. Together with Sahil, we&apos;ve transformed our vision of 
+              AI-powered web design into reality.&quot;
             </p>
             
             <JourneySVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "The launch of CreatorLabs represents more than just a new platform – 
-              it's the culmination of our combined experiences in enterprise software and AI 
-              research. We've built something that we believe will fundamentally change how 
-              websites are created and maintained."
+              Sahil adds, &quot;The launch of CreatorLabs represents more than just a new platform – 
+              it&apos;s the culmination of our combined experiences in enterprise software and AI 
+              research. We&apos;ve built something that we believe will fundamentally change how 
+              websites are created and maintained.&quot;
             </p>
           </div>
 
@@ -132,15 +130,15 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Early Access Success Stories</h2>
             <p className="text-white/90 leading-relaxed">
-              During our beta phase, we've had the privilege of working with innovative businesses 
-              across various sectors. "The results have been incredible," I note. "We've seen 
-              websites not just launch faster, but continuously improve their performance over time."
+              During our beta phase, we&apos;ve had the privilege of working with innovative businesses 
+              across various sectors. &quot;The results have been incredible,&quot; I note. &quot;We&apos;ve seen 
+              websites not just launch faster, but continuously improve their performance over time.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              "One of our early users saw a 300% increase in engagement after implementing our 
-              AI-driven optimizations," Sahil shares. "This is exactly the kind of impact we 
-              envisioned when we started this journey."
+              &quot;One of our early users saw a 300% increase in engagement after implementing our 
+              AI-driven optimizations,&quot; Sahil shares. &quot;This is exactly the kind of impact we 
+              envisioned when we started this journey.&quot;
             </p>
           </div>
 
