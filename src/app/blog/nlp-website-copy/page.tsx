@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const NLPProcessSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Input Text Flow */}
@@ -48,15 +46,15 @@ const NLPProcessSVG = () => (
     <g>
       <rect x="50" y="200" width="200" height="80" rx="8" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
       <text x="150" y="230" className="fill-white text-sm" textAnchor="middle">Professional</text>
-      <text x="150" y="250" className="fill-white/60 text-xs italic" textAnchor="middle">"Delivering exceptional results"</text>
+      <text x="150" y="250" className="fill-white/60 text-xs italic" textAnchor="middle">&quot;Delivering exceptional results&quot;</text>
 
       <rect x="300" y="200" width="200" height="80" rx="8" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
       <text x="400" y="230" className="fill-white text-sm" textAnchor="middle">Casual & Friendly</text>
-      <text x="400" y="250" className="fill-white/60 text-xs italic" textAnchor="middle">"Let's create something amazing"</text>
+      <text x="400" y="250" className="fill-white/60 text-xs italic" textAnchor="middle">&quot;Let&apos;s create something amazing&quot;</text>
 
       <rect x="550" y="200" width="200" height="80" rx="8" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
       <text x="650" y="230" className="fill-white text-sm" textAnchor="middle">Technical</text>
-      <text x="650" y="250" className="fill-white/60 text-xs italic" textAnchor="middle">"Leveraging cutting-edge tech"</text>
+      <text x="650" y="250" className="fill-white/60 text-xs italic" textAnchor="middle">&quot;Leveraging cutting-edge tech&quot;</text>
     </g>
 
     {/* Content Types */}
@@ -133,18 +131,18 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Content Challenge</h2>
             <p className="text-white/90 leading-relaxed">
-              "During my time at Microsoft," I (Vaibhav) share, "one of our biggest 
+              &quot;During my time at Microsoft,&quot; I (Vaibhav) share, &quot;one of our biggest 
               challenges was maintaining consistent brand voice across hundreds of pages. 
               Traditional content creation was like trying to conduct an orchestra where 
-              every musician was playing from a different sheet."
+              every musician was playing from a different sheet.&quot;
             </p>
             
             <NLPProcessSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "That's where NLP comes in. We've trained our AI to understand 
-              not just language, but the subtle nuances of tone and brand voice. It's like 
-              having a content strategist who never sleeps and learns from every interaction."
+              Sahil adds, &quot;That&apos;s where NLP comes in. We&apos;ve trained our AI to understand 
+              not just language, but the subtle nuances of tone and brand voice. It&apos;s like 
+              having a content strategist who never sleeps and learns from every interaction.&quot;
             </p>
           </div>
 
@@ -154,10 +152,10 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Adaptive Tone Mapping</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Most AI content generators are one-size-fits-all," I explain. "We've 
-                  developed a system that adapts its output based on your brand's unique 
+                  &quot;Most AI content generators are one-size-fits-all,&quot; I explain. &quot;We&apos;ve 
+                  developed a system that adapts its output based on your brand&apos;s unique 
                   voice. Whether you need professional authority or casual friendliness, 
-                  the AI maintains consistency while optimizing for engagement."
+                  the AI maintains consistency while optimizing for engagement.&quot;
                 </p>
               </div>
 
@@ -166,10 +164,10 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Human-AI Collaboration</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "The magic isn't in replacing human creativity," Sahil notes, "but in 
+                  &quot;The magic isn&apos;t in replacing human creativity,&quot; Sahil notes, &quot;but in 
                   enhancing it. Our AI analyzes successful content patterns and suggests 
                   optimizations, while preserving the unique insights and emotional 
-                  connections that only humans can create."
+                  connections that only humans can create.&quot;
                 </p>
               </div>
             </div>
@@ -178,17 +176,17 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Real-Time Optimization</h2>
             <p className="text-white/90 leading-relaxed">
-              "One of our early users," I share, "saw their conversion rates jump by 40% 
-              after implementing our AI-optimized copy. But what's really exciting is how 
+              &quot;One of our early users,&quot; I share, &quot;saw their conversion rates jump by 40% 
+              after implementing our AI-optimized copy. But what&apos;s really exciting is how 
               the system learns and adapts. Every user interaction helps refine the content 
-              further."
+              further.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, "We're not just generating content – we're creating a living 
+              Sahil explains, &quot;We&apos;re not just generating content – we&apos;re creating a living 
               document that evolves with your audience. The AI continuously analyzes user 
               engagement and suggests refinements, ensuring your message stays both fresh 
-              and effective."
+              and effective.&quot;
             </p>
           </div>
 

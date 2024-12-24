@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const BlueprintStepsSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Steps Timeline */}
@@ -109,19 +107,19 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Reimagining Website Planning</h2>
             <p className="text-white/90 leading-relaxed">
-              "At Microsoft," I (Vaibhav) recall, "website planning meetings could drag on 
+              &quot;At Microsoft,&quot; I (Vaibhav) recall, &quot;website planning meetings could drag on 
               for weeks. The process was fragmented, with different teams handling design, 
               content, and technical requirements separately. We knew there had to be a 
-              better way."
+              better way.&quot;
             </p>
             
             <BlueprintStepsSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "By applying AI to the planning process, we've condensed what 
-              used to take weeks into a guided journey that takes minutes. But it's not 
-              just about speed – it's about making better decisions through data-driven 
-              insights."
+              Sahil adds, &quot;By applying AI to the planning process, we&apos;ve condensed what 
+              used to take weeks into a guided journey that takes minutes. But it&apos;s not 
+              just about speed – it&apos;s about making better decisions through data-driven 
+              insights.&quot;
             </p>
           </div>
 
@@ -131,10 +129,10 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Smart Foundations</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Each question in our onboarding process," I explain, "is carefully crafted 
+                  &quot;Each question in our onboarding process,&quot; I explain, &quot;is carefully crafted 
                   based on years of enterprise experience. But what makes it special is how 
                   our AI adapts the journey based on your responses, ensuring every decision 
-                  builds toward your specific goals."
+                  builds toward your specific goals.&quot;
                 </p>
               </div>
 
@@ -143,10 +141,10 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Real-Time Intelligence</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "The magic happens behind the scenes," Sahil notes. "While you're answering 
+                  &quot;The magic happens behind the scenes,&quot; Sahil notes. &quot;While you&apos;re answering 
                   questions, our AI is analyzing competitor websites, market trends, and user 
                   behavior patterns to provide contextual suggestions that give you a 
-                  competitive edge."
+                  competitive edge.&quot;
                 </p>
               </div>
             </div>
@@ -155,16 +153,16 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Beyond Templates</h2>
             <p className="text-white/90 leading-relaxed">
-              "Traditional website builders force you into rigid templates," I share. "Our 
+              &quot;Traditional website builders force you into rigid templates,&quot; I share. &quot;Our 
               blueprint process is different. It creates a unique foundation based on your 
               goals, audience, and competitive landscape. Every suggestion is tailored to 
-              your specific needs."
+              your specific needs.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, "The AI doesn't just look at what's working now – it 
+              Sahil explains, &quot;The AI doesn&apos;t just look at what&apos;s working now – it 
               anticipates future trends and user needs. Your blueprint becomes a living 
-              document that evolves with your business and your users."
+              document that evolves with your business and your users.&quot;
             </p>
           </div>
 
@@ -172,7 +170,7 @@ export default function BlogPost() {
             <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Start Your Journey</h3>
             <p className="text-white/90 leading-relaxed mb-6">
               Experience our revolutionary website planning process. In just minutes, 
-              you'll have a comprehensive blueprint for a website that's uniquely yours, 
+              you&apos;ll have a comprehensive blueprint for a website that&apos;s uniquely yours, 
               backed by AI-driven insights and years of enterprise expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

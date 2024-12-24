@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const AnalyticsDashboardSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Dashboard Frame */}
@@ -136,18 +134,18 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Beyond Basic Analytics</h2>
             <p className="text-white/90 leading-relaxed">
-              "At Microsoft," I (Vaibhav) share, "we had access to incredible amounts of 
+              &quot;At Microsoft,&quot; I (Vaibhav) share, &quot;we had access to incredible amounts of 
               data, but turning that into actionable insights was a constant challenge. 
               Teams would spend weeks analyzing reports, only to find that the insights 
-              were already outdated."
+              were already outdated.&quot;
             </p>
             
             <AnalyticsDashboardSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "That's why we built our analytics engine differently. It doesn't 
+              Sahil adds, &quot;That&apos;s why we built our analytics engine differently. It doesn&apos;t 
               just collect data – it actively interprets patterns and suggests optimizations 
-              in real-time. It's like having a team of analysts working 24/7."
+              in real-time. It&apos;s like having a team of analysts working 24/7.&quot;
             </p>
           </div>
 
@@ -157,10 +155,10 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Heatmaps & Click Tracking</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Understanding user behavior isn't just about numbers," I explain. "Our 
+                  &quot;Understanding user behavior isn&apos;t just about numbers,&quot; I explain. &quot;Our 
                   AI creates dynamic heatmaps that show exactly how users interact with 
                   your content. But more importantly, it identifies patterns that humans 
-                  might miss."
+                  might miss.&quot;
                 </p>
               </div>
 
@@ -169,10 +167,10 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Funnel Optimization</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "The real magic happens in the optimization," Sahil notes. "Our AI 
-                  doesn't just show you where users drop off – it proactively suggests 
+                  &quot;The real magic happens in the optimization,&quot; Sahil notes. &quot;Our AI 
+                  doesn&apos;t just show you where users drop off – it proactively suggests 
                   changes to improve conversion rates, backed by data from successful 
-                  patterns across our platform."
+                  patterns across our platform.&quot;
                 </p>
               </div>
 
@@ -183,17 +181,17 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Continuous Improvement</h2>
             <p className="text-white/90 leading-relaxed">
-              "One of our e-commerce clients," I share, "was struggling with cart 
+              &quot;One of our e-commerce clients,&quot; I share, &quot;was struggling with cart 
               abandonment. Our AI identified that users were dropping off at shipping 
               information. By automatically testing different form layouts and copy, we 
-              reduced abandonment by 35% in just two weeks."
+              reduced abandonment by 35% in just two weeks.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, "The system learns from every interaction across our entire 
+              Sahil explains, &quot;The system learns from every interaction across our entire 
               platform. When it discovers an optimization that works well for one site, 
-              it can suggest similar improvements to others in the same industry. It's 
-              like having the collective wisdom of thousands of websites working for you."
+              it can suggest similar improvements to others in the same industry. It&apos;s 
+              like having the collective wisdom of thousands of websites working for you.&quot;
             </p>
           </div>
 
@@ -202,7 +200,7 @@ export default function BlogPost() {
             <p className="text-white/90 leading-relaxed mb-6">
               Experience the power of AI-driven analytics and optimization. Our platform 
               turns complex data into clear, actionable insights that continuously improve 
-              your website's performance.
+              your website&apos;s performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 

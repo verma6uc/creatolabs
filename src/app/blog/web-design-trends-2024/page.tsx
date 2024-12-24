@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const GlassmorphismSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Background Gradient */}
@@ -112,19 +110,19 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Rise of Glassmorphism</h2>
             <p className="text-white/90 leading-relaxed">
-              "When we were designing CreatorLabs," I (Vaibhav) explain, "we wanted to create 
+              &quot;When we were designing CreatorLabs,&quot; I (Vaibhav) explain, &quot;we wanted to create 
               an interface that felt both modern and intuitive. Glassmorphism, with its subtle 
               transparency and blur effects, perfectly captured that balance between sophistication 
-              and accessibility."
+              and accessibility.&quot;
             </p>
             
             <GlassmorphismSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "What's fascinating is how our AI has learned to implement these 
+              Sahil adds, &quot;What&apos;s fascinating is how our AI has learned to implement these 
               effects contextually. It understands when transparency enhances usability and 
-              when it might detract from it. It's not just about following trends – it's 
-              about applying them intelligently."
+              when it might detract from it. It&apos;s not just about following trends – it&apos;s 
+              about applying them intelligently.&quot;
             </p>
           </div>
 
@@ -135,20 +133,20 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Soft UI Evolution</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "During my time at Microsoft," I share, "we experimented extensively with 
+                  &quot;During my time at Microsoft,&quot; I share, &quot;we experimented extensively with 
                   different UI paradigms. Neumorphism emerged as a fascinating middle ground 
                   between flat design and skeuomorphism. It provides depth without sacrificing 
-                  simplicity."
+                  simplicity.&quot;
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">AI-Driven Implementation</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Our AI doesn't just copy these trends," Sahil explains. "It analyzes user 
+                  &quot;Our AI doesn&apos;t just copy these trends,&quot; Sahil explains. &quot;It analyzes user 
                   interaction patterns to determine where soft shadows and subtle gradients 
-                  can enhance the user experience. It's about creating interfaces that feel 
-                  natural and responsive."
+                  can enhance the user experience. It&apos;s about creating interfaces that feel 
+                  natural and responsive.&quot;
                 </p>
               </div>
             </div>
@@ -158,16 +156,16 @@ export default function BlogPost() {
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">AI-Enhanced Design Process</h2>
             <AIDesignSVG />
             <p className="text-white/90 leading-relaxed">
-              "What excites me most," I share, "is how AI is transforming the design process 
-              itself. It's not replacing human creativity – it's amplifying it. Our system 
+              &quot;What excites me most,&quot; I share, &quot;is how AI is transforming the design process 
+              itself. It&apos;s not replacing human creativity – it&apos;s amplifying it. Our system 
               can generate hundreds of design variations while maintaining brand consistency 
-              and usability standards."
+              and usability standards.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil notes, "The real innovation is in how our AI learns from user interactions. 
-              Every click, every scroll helps it understand what works and what doesn't. This 
-              continuous learning ensures our designs stay fresh and effective."
+              Sahil notes, &quot;The real innovation is in how our AI learns from user interactions. 
+              Every click, every scroll helps it understand what works and what doesn&apos;t. This 
+              continuous learning ensures our designs stay fresh and effective.&quot;
             </p>
           </div>
 
@@ -175,7 +173,7 @@ export default function BlogPost() {
             <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Experience Modern Design</h3>
             <p className="text-white/90 leading-relaxed mb-6">
               See how our AI can help you implement these modern design trends in your website. 
-              From glassmorphism to neumorphism, we'll help you create a unique and engaging 
+              From glassmorphism to neumorphism, we&apos;ll help you create a unique and engaging 
               user experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

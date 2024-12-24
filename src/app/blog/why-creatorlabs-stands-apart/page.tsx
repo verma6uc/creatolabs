@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const CompetitiveAnalysisSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Traditional Website Builders */}
@@ -108,20 +106,20 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Current Landscape</h2>
             <p className="text-white/90 leading-relaxed">
-              "During my time at Microsoft," I (Vaibhav) explain, "I saw countless enterprises 
+              &quot;During my time at Microsoft,&quot; I (Vaibhav) explain, &quot;I saw countless enterprises 
               struggling with a fundamental problem: existing website solutions were either too 
               simple or too complex, with nothing in between. Traditional builders offered ease 
               of use but lacked sophistication, while enterprise solutions required extensive 
-              technical expertise."
+              technical expertise.&quot;
             </p>
             
             <CompetitiveAnalysisSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "Even newer AI-powered tools miss the mark. They focus on generating 
+              Sahil adds, &quot;Even newer AI-powered tools miss the mark. They focus on generating 
               content or code but fail to understand that a website is a living entity that 
               needs to evolve with its users. This insight from my research in adaptive systems 
-              became a cornerstone of CreatorLabs."
+              became a cornerstone of CreatorLabs.&quot;
             </p>
           </div>
 
@@ -132,29 +130,29 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Dynamic Evolution vs. Static Updates</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Most platforms treat a website like a product," Sahil notes. "We treat it 
+                  &quot;Most platforms treat a website like a product,&quot; Sahil notes. &quot;We treat it 
                   like an organism. While others offer periodic updates, our AI continuously 
                   learns from user interactions, making real-time optimizations that keep your 
-                  site perpetually optimized."
+                  site perpetually optimized.&quot;
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Enterprise-Grade Analytics Made Simple</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "At Microsoft, I saw how powerful enterprise analytics could be," I share. 
-                  "But they were always too complex for most users. We've packaged that 
-                  enterprise power into an AI interface that makes it accessible to everyone."
+                  &quot;At Microsoft, I saw how powerful enterprise analytics could be,&quot; I share. 
+                  &quot;But they were always too complex for most users. We&apos;ve packaged that 
+                  enterprise power into an AI interface that makes it accessible to everyone.&quot;
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">True AI Integration</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "While others use AI as a feature, we've made it the foundation," Sahil 
-                  explains. "Every aspect of your website, from design to content to 
-                  optimization, is powered by our adaptive AI system. It's not just about 
-                  generating content – it's about understanding and evolving with your business."
+                  &quot;While others use AI as a feature, we&apos;ve made it the foundation,&quot; Sahil 
+                  explains. &quot;Every aspect of your website, from design to content to 
+                  optimization, is powered by our adaptive AI system. It&apos;s not just about 
+                  generating content – it&apos;s about understanding and evolving with your business.&quot;
                 </p>
               </div>
             </div>
@@ -163,17 +161,17 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Real Results, Not Just Features</h2>
             <p className="text-white/90 leading-relaxed">
-              "During our beta testing," I share, "we saw something remarkable. While other 
-              platforms' sites typically plateau in performance after launch, our sites showed 
+              &quot;During our beta testing,&quot; I share, &quot;we saw something remarkable. While other 
+              platforms&apos; sites typically plateau in performance after launch, our sites showed 
               continuous improvement. One e-commerce client saw conversion rates increase by 
-              40% over three months through AI-driven optimizations alone."
+              40% over three months through AI-driven optimizations alone.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "What's even more exciting is how the system learns across our 
+              Sahil adds, &quot;What&apos;s even more exciting is how the system learns across our 
               entire platform. When one site discovers an optimization that works, our AI 
               can adapt that learning to benefit similar sites across our network, while 
-              still maintaining each site's unique identity."
+              still maintaining each site&apos;s unique identity.&quot;
             </p>
           </div>
 
@@ -181,8 +179,8 @@ export default function BlogPost() {
             <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Experience the Difference</h3>
             <p className="text-white/90 leading-relaxed mb-6">
               We built CreatorLabs to be the platform we wished existed during our years in 
-              enterprise software and AI research. It's not just another website builder – 
-              it's a partnership between human creativity and AI intelligence, continuously 
+              enterprise software and AI research. It&apos;s not just another website builder – 
+              it&apos;s a partnership between human creativity and AI intelligence, continuously 
               working to make your digital presence more effective.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
