@@ -8,16 +8,16 @@ interface Feature {
 
 const timelineNodes: Feature[] = [
   {
-    title: 'Automatic Analytics',
-    description: 'Built-in tracking monitors clicks, scroll depth, bounce rates, and time on page with zero setup.'
+    title: '24-Hour Analysis',
+    description: 'Every day, AI reviews your site metrics and suggests improvements like "Move the contact form higher for better visibility."'
   },
   {
-    title: 'Smart Adaptations',
-    description: 'AI proposes layout changes, content modifications, and CTA improvements based on visitor behavior.'
+    title: 'Collaborative Feedback',
+    description: 'Team members can suggest changes simultaneously, with each edit versioned and queued for review.'
   },
   {
-    title: 'Version Control',
-    description: 'Every change is versioned, letting you experiment risk-free and revert if needed.'
+    title: 'Instant Optimization',
+    description: 'Low engagement? AI suggests "Try a simpler color scheme" or "Add a more eye-catching CTA here."'
   }
 ];
 
@@ -31,10 +31,10 @@ export const EvolutionSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6 animate-fade-up">
-              Dynamic Evolution Engine
+              Real-Time Optimization
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Your website continuously improves through AI-powered analysis of user behavior, automatically suggesting and implementing optimizations.
+              Your site evolves daily with AI-powered suggestions. From vague headlines to hidden CTAs, we catch and fix engagement issues automatically.
             </p>
           </div>
 
