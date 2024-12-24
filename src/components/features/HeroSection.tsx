@@ -31,10 +31,10 @@ export const HeroSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center">
         <div className="glass-card p-8 md:p-12 rounded-2xl backdrop-blur-lg bg-white/10">
           <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-white mb-6 animate-fade-up">
-            Unleash the Power of Adaptive Creation
+            Meet Your AI Crew for Website Creation
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-12 animate-fade-up animate-delay-100">
-            Discover the tools that make your website come alive—guided by AI, refined by your vision.
+            From Captain SiteBuilder to Lieutenant SEO, our AI crew works tirelessly to create, evolve, and optimize your website in real-time.
           </p>
         </div>
       </div>

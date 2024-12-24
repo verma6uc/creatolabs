@@ -8,16 +8,16 @@ interface Feature {
 
 const timelineNodes: Feature[] = [
   {
-    title: 'Click Tracking',
-    description: 'Pinpoint which sections captivate users the most—and which need a facelift.'
+    title: 'Automatic Analytics',
+    description: 'Built-in tracking monitors clicks, scroll depth, bounce rates, and time on page with zero setup.'
   },
   {
-    title: 'Automated Tweaks',
-    description: 'Our AI suggests real-time design updates based on user engagement metrics.'
+    title: 'Smart Adaptations',
+    description: 'AI proposes layout changes, content modifications, and CTA improvements based on visitor behavior.'
   },
   {
-    title: 'Refined CTAs',
-    description: 'Enjoy data-driven call-to-action copy and positioning to elevate conversions.'
+    title: 'Version Control',
+    description: 'Every change is versioned, letting you experiment risk-free and revert if needed.'
   }
 ];
 
@@ -31,10 +31,10 @@ export const EvolutionSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6 animate-fade-up">
-              Act 2: An Ever-Evolving Creation
+              Dynamic Evolution Engine
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Your website is never static. Each visitor&apos;s click and every scroll feed our AI engine, inspiring new layouts and fresh content suggestions.
+              Your website continuously improves through AI-powered analysis of user behavior, automatically suggesting and implementing optimizations.
             </p>
           </div>
 

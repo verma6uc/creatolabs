@@ -8,16 +8,16 @@ interface Feature {
 
 const aiFeatures: Feature[] = [
   {
-    title: 'Instant Color Palettes',
-    description: 'Provide a single shade or mood, and watch as our AI crafts cohesive palettes.'
+    title: 'Captain SiteBuilder',
+    description: 'Your guide through blueprint creation, expertly handling pages, navigation, and layout design.'
   },
   {
-    title: 'Smart Layout Suggestions',
-    description: 'Say "Hero at the top, call-to-action next," and let our AI arrange the perfect layout.'
+    title: 'Commander Content',
+    description: 'Generates and refines text for each section, from headlines to product descriptions.'
   },
   {
-    title: 'Responsive Previews',
-    description: 'See your site&apos;s fluid design adapt across mobile, tablet, and desktops seamlessly.'
+    title: 'Lieutenant SEO',
+    description: 'Analyzes competitors, suggests metadata, and monitors search rankings for ongoing optimization.'
   }
 ];
 
@@ -31,10 +31,10 @@ export const AIDrivenSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6 animate-fade-up">
-              Act 1: Vision Meets AI
+              10-Minute Website Creation
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Enter a world where your ideas shape themselves. Our AI engine listens to your brand&apos;s essence, then conjures a visually stunning layout in seconds.
+              Meet your AI crew members who will guide you through a frictionless onboarding process, creating your perfect website in minutes.
             </p>
           </div>
 

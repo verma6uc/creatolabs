@@ -8,16 +8,16 @@ interface Feature {
 
 const seoFeatures: Feature[] = [
   {
-    title: 'Competitor Dashboard',
-    description: 'Analyze rival traffic and strategies with one click.'
+    title: 'Deep Competitor Analysis',
+    description: 'Integrates with SEMrush and Ahrefs to analyze traffic patterns and top keywords from competitor sites.'
   },
   {
-    title: 'Intelligent Keyword Suggestions',
-    description: 'Our AI recommends keywords tailored to your audience and niche.'
+    title: 'Automatic Page Suggestions',
+    description: 'Identifies common pages and features among top competitors and suggests them for your site structure.'
   },
   {
-    title: 'Automated SEO Health Checks',
-    description: 'Receive alerts if your site\'s performance dips below top industry metrics.'
+    title: 'Live SEO Monitoring',
+    description: 'Lieutenant SEO continuously monitors rankings and suggests new content opportunities to stay competitive.'
   }
 ];
 
@@ -31,10 +31,10 @@ export const CompetitorSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6 animate-fade-up">
-              Act 3: Rise Above the Crowd
+              Real-Time Competitor Insights
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Go beyond cookie-cutter designs. Our platform monitors competitor performance, keywords, and SEO trends, ensuring you stand out in your industry.
+              Stay ahead with continuous competitor monitoring and SEO optimization. Lieutenant SEO analyzes your market and provides actionable recommendations.
             </p>
           </div>
 

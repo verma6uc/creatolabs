@@ -7,20 +7,20 @@ interface Feature {
 
 const extraFeatures: Feature[] = [
   {
-    title: 'Custom Domains',
-    description: 'Seamlessly connect your own domain—no technical headaches.'
+    title: 'Token-Based Flexibility',
+    description: 'Pay only for what you need with our token system—perfect for bursts of AI activity without upgrading plans.'
   },
   {
-    title: 'Built-In Forms',
-    description: 'Capture leads or inquiries without separate plugins or code.'
+    title: 'Glassmorphism Design',
+    description: 'Modern, translucent UI with subtle blurs and layered depth creates an engaging, futuristic experience.'
   },
   {
-    title: 'Advanced Admin Panel',
-    description: 'Edit, redesign, or roll back versions in a snap.'
+    title: 'Micro-Animations',
+    description: 'Delightful hover effects, loading states, and interactive elements enhance user engagement.'
   },
   {
-    title: 'Team Collaboration',
-    description: 'Invite team members to co-create, manage, and optimize your site together.'
+    title: 'Version History',
+    description: 'Every AI-suggested change is versioned, letting you experiment confidently with new designs.'
   }
 ];
 
@@ -34,10 +34,10 @@ export const ExtendedFeaturesSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6 animate-fade-up">
-              Final Act: The Extras that Seal the Deal
+              Modern Design & Flexible Pricing
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Beyond the core, Creator Lab packs extra punches that make your life easier.
+              Experience our cutting-edge glassmorphism design while enjoying the flexibility of token-based pricing for advanced features.
             </p>
           </div>
 
