@@ -33,9 +33,9 @@ export default function Timeline({ steps }: TimelineProps) {
 
     const stepElements = timelineRef.current?.children;
     if (stepElements) {
-      Array.from(stepElements).forEach((step, index) => {
+      Array.from(stepElements).forEach((step, i) => {
         if (step instanceof HTMLElement) {
-          step.style.transitionDelay = `${index * 150}ms`;
+          step.style.transitionDelay = `${i * 150}ms`;
           observer.observe(step);
         }
       });

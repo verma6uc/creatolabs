@@ -78,7 +78,7 @@ export function FoundingTeam() {
           ref={cardsRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
         >
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <div
               key={member.name}
               className="glass-card p-8 rounded-xl opacity-0 translate-y-8 group hover:bg-white/10 transition-all duration-700"

@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 
 export function HeroSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
 
@@ -62,7 +61,7 @@ export function HeroSection() {
               ref={textRef}
               className="text-xl text-white/90 max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-700 delay-200"
             >
-              Whether you're just beginning your journey or you're ready to harness AI at scale, 
+              Whether you&apos;re just beginning your journey or you&apos;re ready to harness AI at scale, 
               our plans offer powerful features—and our token system ensures you only pay for what you need.
             </p>
           </div>

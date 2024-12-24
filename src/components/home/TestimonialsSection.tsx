@@ -123,7 +123,7 @@ export const TestimonialsSection = () => {
                   {/* Content */}
                   <div className="relative z-10">
                     <p className="text-xl md:text-2xl text-white/90 mb-8 italic group-hover:text-white transition-colors duration-300">
-                      "{testimonial.quote}"
+                      {`"${testimonial.quote}"`}
                     </p>
                     <div className="text-white">
                       <p className="font-montserrat font-semibold group-hover:text-sage-green-light transition-colors duration-300">

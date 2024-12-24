@@ -7,13 +7,13 @@ const agents = [
   {
     name: 'Captain SiteBuilder',
     role: 'Core Structure & Design',
-    description: 'Oversees your site\'s core structure and design. Helps chart the initial blueprint and ensures your site remains on the right course.',
+    description: 'Oversees your site&apos;s core structure and design. Helps chart the initial blueprint and ensures your site remains on the right course.',
     icon: '/icons/design-bot.svg'
   },
   {
     name: 'Commander Content',
     role: 'Content Strategy',
-    description: 'Specializes in crafting high-impact copy and text prompts. Handles your website\'s voice, tone, and messaging like a pro.',
+    description: 'Specializes in crafting high-impact copy and text prompts. Handles your website&apos;s voice, tone, and messaging like a pro.',
     icon: '/icons/content-bot.svg'
   },
   {
@@ -84,8 +84,8 @@ export function AIAgents() {
             Meet the AI Crew
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Our resident AI "officers" guide you through every stage of building and evolving your website. 
-            Each plays a distinct role—just like a starship's crew.
+            Our resident AI &quot;officers&quot; guide you through every stage of building and evolving your website. 
+            Each plays a distinct role—just like a starship&apos;s crew.
           </p>
         </div>
 

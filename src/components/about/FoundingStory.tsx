@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export function FoundingStory() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -56,10 +56,11 @@ export function FoundingStory() {
 
               {/* Team Illustration */}
               <div className="absolute inset-0 flex items-center justify-center z-10 bg-dark-bg/20">
-                <img 
+                <Image 
                   src="/images/team-illustration.png" 
                   alt="CreatorLabs Team Illustration" 
-                  className="w-full h-full object-cover mix-blend-lighten"
+                  fill
+                  className="object-cover mix-blend-lighten"
                 />
               </div>
 

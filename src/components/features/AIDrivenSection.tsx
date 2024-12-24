@@ -17,7 +17,7 @@ const aiFeatures: Feature[] = [
   },
   {
     title: 'Responsive Previews',
-    description: 'See your site\'s fluid design adapt across mobile, tablet, and desktops seamlessly.'
+    description: 'See your site&apos;s fluid design adapt across mobile, tablet, and desktops seamlessly.'
   }
 ];
 

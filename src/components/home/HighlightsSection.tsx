@@ -89,7 +89,7 @@ export const HighlightsSection = () => {
           ref={cardsRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {highlights.map((highlight, index) => (
+          {highlights.map((highlight) => (
             <div
               key={highlight.title}
               className="group glass-card p-8 rounded-xl transform transition-all duration-700 hover:scale-105 bg-gradient-to-br from-white/[0.35] to-white/[0.25] relative overflow-hidden shadow-[0_8px_32px_-4px_rgba(0,0,0,0.3),0_0_24px_rgba(255,255,255,0.15)] shadow-black/40"

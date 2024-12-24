@@ -34,7 +34,7 @@ export const EvolutionSection = () => {
               Act 2: An Ever-Evolving Creation
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up animate-delay-100">
-              Your website is never static. Each visitor's click and every scroll feed our AI engine, inspiring new layouts and fresh content suggestions.
+              Your website is never static. Each visitor&apos;s click and every scroll feed our AI engine, inspiring new layouts and fresh content suggestions.
             </p>
           </div>
 

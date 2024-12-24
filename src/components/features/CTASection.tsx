@@ -11,7 +11,7 @@ export const CTASection = () => {
               Ready to Start Your Own Show?
             </h2>
             <p className="text-xl text-white/90 mb-10 animate-fade-up animate-delay-100">
-              Step into the spotlight and let Creator Lab's AI stage the perfect website for you—constantly changing, always evolving.
+              Step into the spotlight and let Creator Lab&apos;s AI stage the perfect website for you—constantly changing, always evolving.
             </p>
             <button className="btn-primary relative overflow-hidden group">
               <span className="relative z-10">Begin Your Journey</span>
