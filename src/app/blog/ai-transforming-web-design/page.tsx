@@ -74,94 +74,124 @@ export default function BlogPost() {
           </p>
         </header>
 
-        <div className="prose prose-lg prose-invert mx-auto">
-          <h2>The Evolution of Web Design</h2>
-          <p>
+        <div className="prose prose-lg prose-invert mx-auto space-y-12">
+          <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Evolution of Web Design</h2>
+            <p className="text-white/90 leading-relaxed">
             As a software engineer with over a decade of experience at tech giants like Microsoft, 
             I (Vaibhav) have witnessed firsthand the evolution of web development. From writing 
             HTML by hand to working with complex enterprise systems, I've seen both the challenges 
             and opportunities in this space.
-          </p>
-          
-          <p>
+            </p>
+            
+            <p className="text-white/90 leading-relaxed mt-4">
             My journey intersected with Sahil's at a crucial moment. With his background in AI and 
             machine learning from his time at leading research institutions, we both recognized a 
             fundamental truth: web design was stuck in the past, bound by manual processes and 
             repetitive tasks that could be transformed through AI.
-          </p>
+            </p>
+          </div>
 
-          <ComparisonSVG />
+          <div className="bg-dark-bg/50 rounded-xl p-8 border border-white/10 shadow-xl">
+            <ComparisonSVG />
+          </div>
 
-          <h2>The Spark That Started CreatorLabs</h2>
-          <p>
+          <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Spark That Started CreatorLabs</h2>
+            <p className="text-white/90 leading-relaxed">
             "During my time at Microsoft," I often share, "I kept running into the same problem: 
             talented teams spending countless hours on website maintenance instead of innovation." 
             This frustration resonated with Sahil, who had been exploring how AI could automate 
             complex decision-making processes.
-          </p>
+            </p>
 
-          <p>
+            <p className="text-white/90 leading-relaxed mt-4">
             Together, we envisioned a future where website creation wasn't just automated – it was 
             intelligent. Drawing from my experience with enterprise-scale systems and Sahil's expertise 
             in AI, we built CreatorLabs to revolutionize how websites are created and maintained.
-          </p>
+            </p>
+          </div>
 
-          <AIProcessSVG />
+          <div className="bg-dark-bg/50 rounded-xl p-8 border border-white/10 shadow-xl">
+            <AIProcessSVG />
+          </div>
 
-          <h2>Key Benefits of AI-Driven Web Design</h2>
-          <ul>
-            <li>
-              <strong>Speed and Efficiency:</strong> What once took weeks can now be accomplished in minutes
+          <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Key Benefits of AI-Driven Web Design</h2>
+          <ul className="space-y-4">
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+              <div>
+                <strong className="text-sage-green">Speed and Efficiency:</strong>
+                <span className="text-white/90 ml-2">What once took weeks can now be accomplished in minutes</span>
+              </div>
             </li>
-            <li>
-              <strong>Intelligent Optimization:</strong> Continuous improvement based on real user data
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+              <div>
+                <strong className="text-sage-green">Intelligent Optimization:</strong>
+                <span className="text-white/90 ml-2">Continuous improvement based on real user data</span>
+              </div>
             </li>
-            <li>
-              <strong>Competitive Edge:</strong> Automated competitor analysis and adaptation
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+              <div>
+                <strong className="text-sage-green">Competitive Edge:</strong>
+                <span className="text-white/90 ml-2">Automated competitor analysis and adaptation</span>
+              </div>
             </li>
-            <li>
-              <strong>Cost-Effective:</strong> Reduced need for multiple specialized tools and services
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+              <div>
+                <strong className="text-sage-green">Cost-Effective:</strong>
+                <span className="text-white/90 ml-2">Reduced need for multiple specialized tools and services</span>
+              </div>
             </li>
           </ul>
+          </div>
 
-          <h2>A Personal Mission</h2>
-          <p>
+          <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">A Personal Mission</h2>
+            <p className="text-white/90 leading-relaxed">
             "Every website should be a living, breathing entity," Sahil often says, drawing from his 
             research in adaptive systems. We've built this philosophy into CreatorLabs, creating a 
             platform that doesn't just build websites – it nurtures them, helps them grow, and 
             evolves them based on real user interactions.
-          </p>
+            </p>
 
-          <p>
+            <p className="text-white/90 leading-relaxed mt-4">
             My years of working with enterprise clients taught me that businesses need more than 
             just a website – they need a digital presence that actively works for them. That's why 
             we've integrated advanced analytics and competitor tracking directly into our platform.
-          </p>
+            </p>
+          </div>
 
-          <h2>Our Vision for the Future</h2>
-          <p>
+          <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Our Vision for the Future</h2>
+            <p className="text-white/90 leading-relaxed">
             Having spent years at the forefront of technology, both Sahil and I are excited about 
             what's coming next. We're already working on integrating AR/VR capabilities and voice 
             interfaces, drawing from our combined experience in enterprise software and AI research.
-          </p>
+            </p>
 
-          <p>
+            <p className="text-white/90 leading-relaxed mt-4">
             "The future of web design isn't just about automation," Sahil explains, "it's about 
             creating websites that understand and adapt to their users." This vision, born from 
             our experiences at Microsoft and in AI research, is what drives us to keep pushing 
             the boundaries of what's possible.
-          </p>
+            </p>
+          </div>
 
-          <div className="bg-sage-green/10 border border-sage-green rounded-lg p-6 my-8">
-            <h3 className="text-sage-green mb-4">Ready to Experience the Future?</h3>
-            <p className="mb-4">
+          <div className="bg-gradient-to-br from-sage-green/20 to-sage-green/5 rounded-xl p-8 border border-sage-green/30 shadow-lg">
+            <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Ready to Experience the Future?</h3>
+            <p className="text-white/90 leading-relaxed mb-6">
               Join us on this journey to revolutionize web design. As engineers who've experienced 
               the pain points firsthand, we've built the solution we wish we had. Let's create 
               something amazing together.
             </p>
             <a 
               href="/get-started" 
-              className="inline-block bg-sage-green text-white px-6 py-3 rounded-lg hover:bg-sage-green/90 transition-colors"
+              className="inline-block bg-sage-green text-white px-8 py-4 rounded-lg hover:bg-sage-green/90 transition-all duration-300 shadow-lg hover:shadow-sage-green/20 hover:translate-y-[-2px] font-semibold"
             >
               Get Started Now
             </a>
