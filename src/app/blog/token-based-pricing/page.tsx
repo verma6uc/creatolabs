@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const PricingComparisonSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Subscription Model */}
@@ -107,17 +105,17 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Rethinking Pricing Models</h2>
             <p className="text-white/90 leading-relaxed">
-              "At Microsoft," I (Vaibhav) share, "I saw how enterprise customers struggled 
-              with rigid subscription models. Some months they'd barely use the service, 
-              other months they'd hit their limits. It never quite matched their actual needs."
+              &quot;At Microsoft,&quot; I (Vaibhav) share, &quot;I saw how enterprise customers struggled 
+              with rigid subscription models. Some months they&apos;d barely use the service, 
+              other months they&apos;d hit their limits. It never quite matched their actual needs.&quot;
             </p>
             
             <PricingComparisonSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil adds, "When designing CreatorLabs' pricing, we wanted to create something 
+              Sahil adds, &quot;When designing CreatorLabs&apos; pricing, we wanted to create something 
               that truly aligned with value. Tokens provide that flexibility – you only pay 
-              for the AI operations you actually use."
+              for the AI operations you actually use.&quot;
             </p>
           </div>
 
@@ -128,19 +126,19 @@ export default function BlogPost() {
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Transparent Value</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "Each token represents a specific AI operation," I explain. "Whether it's 
+                  &quot;Each token represents a specific AI operation,&quot; I explain. &quot;Whether it&apos;s 
                   generating content, analyzing competitors, or optimizing your design, you 
-                  always know exactly what you're paying for. No hidden costs, no unused 
-                  subscription fees."
+                  always know exactly what you&apos;re paying for. No hidden costs, no unused 
+                  subscription fees.&quot;
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Flexible Usage</h3>
                 <p className="text-white/90 leading-relaxed">
-                  "The beauty of tokens," Sahil notes, "is that they never expire. You can 
+                  &quot;The beauty of tokens,&quot; Sahil notes, &quot;is that they never expire. You can 
                   use them intensively during a website redesign, then space them out for 
-                  maintenance and optimization. It's completely aligned with your workflow."
+                  maintenance and optimization. It&apos;s completely aligned with your workflow.&quot;
                 </p>
               </div>
             </div>
@@ -149,17 +147,17 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Real-World Benefits</h2>
             <p className="text-white/90 leading-relaxed">
-              "One of our early users, a marketing agency," I share, "found that tokens 
+              &quot;One of our early users, a marketing agency,&quot; I share, &quot;found that tokens 
               perfectly matched their project-based workflow. They could bulk-buy tokens 
               during their annual budget and use them flexibly across different client 
-              projects throughout the year."
+              projects throughout the year.&quot;
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, "We've also seen solo entrepreneurs appreciate the control. 
+              Sahil explains, &quot;We&apos;ve also seen solo entrepreneurs appreciate the control. 
               They can start small, experiment with different features, and scale up their 
-              token usage as their business grows. It's growth-friendly pricing that puts 
-              you in control."
+              token usage as their business grows. It&apos;s growth-friendly pricing that puts 
+              you in control.&quot;
             </p>
           </div>
 
