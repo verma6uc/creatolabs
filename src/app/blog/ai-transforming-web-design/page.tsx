@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 const ComparisonSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Traditional Web Design Process */}
@@ -80,12 +78,12 @@ export default function BlogPost() {
             <p className="text-white/90 leading-relaxed">
             As a software engineer with over a decade of experience at tech giants like Microsoft, 
             I (Vaibhav) have witnessed firsthand the evolution of web development. From writing 
-            HTML by hand to working with complex enterprise systems, I've seen both the challenges 
+            HTML by hand to working with complex enterprise systems, I&apos;ve seen both the challenges 
             and opportunities in this space.
             </p>
             
             <p className="text-white/90 leading-relaxed mt-4">
-            My journey intersected with Sahil's at a crucial moment. With his background in AI and 
+            My journey intersected with Sahil&apos;s at a crucial moment. With his background in AI and 
             machine learning from his time at leading research institutions, we both recognized a 
             fundamental truth: web design was stuck in the past, bound by manual processes and 
             repetitive tasks that could be transformed through AI.
@@ -99,15 +97,15 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Spark That Started CreatorLabs</h2>
             <p className="text-white/90 leading-relaxed">
-            "During my time at Microsoft," I often share, "I kept running into the same problem: 
-            talented teams spending countless hours on website maintenance instead of innovation." 
+            &quot;During my time at Microsoft,&quot; I often share, &quot;I kept running into the same problem: 
+            talented teams spending countless hours on website maintenance instead of innovation.&quot; 
             This frustration resonated with Sahil, who had been exploring how AI could automate 
             complex decision-making processes.
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-            Together, we envisioned a future where website creation wasn't just automated – it was 
-            intelligent. Drawing from my experience with enterprise-scale systems and Sahil's expertise 
+            Together, we envisioned a future where website creation wasn&apos;t just automated – it was 
+            intelligent. Drawing from my experience with enterprise-scale systems and Sahil&apos;s expertise 
             in AI, we built CreatorLabs to revolutionize how websites are created and maintained.
             </p>
           </div>
@@ -153,16 +151,16 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">A Personal Mission</h2>
             <p className="text-white/90 leading-relaxed">
-            "Every website should be a living, breathing entity," Sahil often says, drawing from his 
-            research in adaptive systems. We've built this philosophy into CreatorLabs, creating a 
-            platform that doesn't just build websites – it nurtures them, helps them grow, and 
+            &quot;Every website should be a living, breathing entity,&quot; Sahil often says, drawing from his 
+            research in adaptive systems. We&apos;ve built this philosophy into CreatorLabs, creating a 
+            platform that doesn&apos;t just build websites – it nurtures them, helps them grow, and 
             evolves them based on real user interactions.
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
             My years of working with enterprise clients taught me that businesses need more than 
-            just a website – they need a digital presence that actively works for them. That's why 
-            we've integrated advanced analytics and competitor tracking directly into our platform.
+            just a website – they need a digital presence that actively works for them. That&apos;s why 
+            we&apos;ve integrated advanced analytics and competitor tracking directly into our platform.
             </p>
           </div>
 
@@ -170,23 +168,23 @@ export default function BlogPost() {
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Our Vision for the Future</h2>
             <p className="text-white/90 leading-relaxed">
             Having spent years at the forefront of technology, both Sahil and I are excited about 
-            what's coming next. We're already working on integrating AR/VR capabilities and voice 
+            what&apos;s coming next. We&apos;re already working on integrating AR/VR capabilities and voice 
             interfaces, drawing from our combined experience in enterprise software and AI research.
             </p>
 
             <p className="text-white/90 leading-relaxed mt-4">
-            "The future of web design isn't just about automation," Sahil explains, "it's about 
-            creating websites that understand and adapt to their users." This vision, born from 
+            &quot;The future of web design isn&apos;t just about automation,&quot; Sahil explains, &quot;it&apos;s about 
+            creating websites that understand and adapt to their users.&quot; This vision, born from 
             our experiences at Microsoft and in AI research, is what drives us to keep pushing 
-            the boundaries of what's possible.
+            the boundaries of what&apos;s possible.
             </p>
           </div>
 
           <div className="bg-gradient-to-br from-sage-green/20 to-sage-green/5 rounded-xl p-8 border border-sage-green/30 shadow-lg">
             <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Ready to Experience the Future?</h3>
             <p className="text-white/90 leading-relaxed mb-6">
-              Join us on this journey to revolutionize web design. As engineers who've experienced 
-              the pain points firsthand, we've built the solution we wish we had. Let's create 
+              Join us on this journey to revolutionize web design. As engineers who&apos;ve experienced 
+              the pain points firsthand, we&apos;ve built the solution we wish we had. Let&apos;s create 
               something amazing together.
             </p>
             <a 
