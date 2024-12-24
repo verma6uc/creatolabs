@@ -27,6 +27,37 @@ export type WizardData = {
   slogans: string[];
   integrations: string[];
   analyticsTools: string[];
+  aiAnalysis?: {
+    competitorInsights: Array<{
+      url: string;
+      traffic: string;
+      topKeywords: string[];
+      commonPages: string[];
+    }>;
+    suggestions: {
+      layout: Array<{
+        element: string;
+        suggestion: string;
+        impact: string;
+      }>;
+      design: Array<{
+        element: string;
+        suggestion: string;
+        impact: string;
+      }>;
+      content: Array<{
+        element: string;
+        suggestion: string;
+        impact: string;
+      }>;
+    };
+  };
+  versionHistory?: Array<{
+    id: number;
+    timestamp: string;
+    changes: string[];
+  }>;
+  currentVersion?: number;
 };
 
 const initialData: WizardData = {
@@ -134,8 +165,58 @@ export function OnboardingWizard() {
     }
   };
 
-  const handleComplete = () => {
-    console.log('Wizard completed with data:', wizardData);
+  const handleComplete = async () => {
+    console.log('Starting AI build process...');
+    
+    // Simulate AI build process
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Add initial version to history
+    const initialVersion = {
+      id: 1,
+      timestamp: new Date().toISOString(),
+      changes: ['Initial website build']
+    };
+
+    setWizardData(prev => ({
+      ...prev,
+      versionHistory: [initialVersion],
+      currentVersion: 1,
+      aiAnalysis: {
+        competitorInsights: prev.competitorUrls.map(url => ({
+          url,
+          traffic: `${Math.floor(Math.random() * 50000 + 10000)} monthly visits`,
+          topKeywords: ['website builder', 'AI website', 'custom website'],
+          commonPages: ['Features', 'Pricing', 'Blog', 'About']
+        })),
+        suggestions: {
+          layout: [
+            {
+              element: 'Navigation',
+              suggestion: 'Move contact button to top right',
+              impact: 'Could improve conversion rates by 15%'
+            }
+          ],
+          design: [
+            {
+              element: 'Color Scheme',
+              suggestion: 'Increase contrast ratio',
+              impact: 'Better accessibility and readability'
+            }
+          ],
+          content: [
+            {
+              element: 'Hero Section',
+              suggestion: 'Make headline more action-oriented',
+              impact: 'Expected to increase engagement'
+            }
+          ]
+        }
+      }
+    }));
+
+    // Here you would typically redirect to a dashboard or build status page
+    console.log('AI build process initiated with data:', wizardData);
   };
 
   const handleDataUpdate = (newData: WizardData) => {
@@ -178,7 +259,7 @@ export function OnboardingWizard() {
           </div>
 
           {/* Step Content */}
-          <div className="glass-card max-w-4xl mx-auto p-8 md:p-12 rounded-2xl backdrop-blur-lg bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-700">
+          <div className="max-w-4xl mx-auto p-8 md:p-12 rounded-2xl bg-dark-surface border border-white/10">
             <CurrentStepComponent 
               data={wizardData}
               setData={handleDataUpdate}

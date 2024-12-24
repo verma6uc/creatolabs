@@ -23,8 +23,40 @@ export function StepCompetitors({ data, setData, onNext, onPrev }: StepProps) {
     urls: '',
     keywords: '',
   });
+  const [competitorAnalysis, setCompetitorAnalysis] = useState<{
+    loading: boolean;
+    insights: Array<{
+      url: string;
+      traffic: string;
+      topKeywords: string[];
+      commonPages: string[];
+    }>;
+  }>({
+    loading: false,
+    insights: []
+  });
 
-  const handleUrlAdd = () => {
+  // Simulated competitor analysis
+  const analyzeCompetitor = async (url: string) => {
+    setCompetitorAnalysis(prev => ({ ...prev, loading: true }));
+    
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    const mockInsight = {
+      url,
+      traffic: Math.floor(Math.random() * 50000 + 10000) + " monthly visits",
+      topKeywords: ["website builder", "AI website", "custom website", "business website"],
+      commonPages: ["Features", "Pricing", "Blog", "About", "Contact", "FAQ"]
+    };
+
+    setCompetitorAnalysis(prev => ({
+      loading: false,
+      insights: [...prev.insights, mockInsight]
+    }));
+  };
+
+  const handleUrlAdd = async () => {
     if (newUrl && isValidUrl(newUrl)) {
       setData({
         ...data,
@@ -32,6 +64,7 @@ export function StepCompetitors({ data, setData, onNext, onPrev }: StepProps) {
       });
       setNewUrl('');
       setErrors({ ...errors, urls: '' });
+      await analyzeCompetitor(newUrl);
     } else {
       setErrors({ ...errors, urls: 'Please enter a valid URL' });
     }
@@ -106,25 +139,61 @@ export function StepCompetitors({ data, setData, onNext, onPrev }: StepProps) {
         {errors.urls && (
           <p className="text-red-500 text-sm">{errors.urls}</p>
         )}
+        {competitorAnalysis.loading && (
+          <div className="p-4 text-white/60 text-center">
+            Lieutenant SEO is analyzing competitor data...
+          </div>
+        )}
+        
         {data.competitorUrls.length > 0 && (
-          <div className="space-y-2">
-            {data.competitorUrls.map((url) => (
-              <div key={url} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                <span className="text-white truncate">{url}</span>
-                <button
-                  type="button"
-                  onClick={() => handleUrlRemove(url)}
-                  className="text-white/60 hover:text-red-500 transition-colors"
-                >
-                  Remove
-                </button>
+          <div className="space-y-4">
+            {competitorAnalysis.insights.map((insight) => (
+              <div key={insight.url} className="p-4 bg-white/5 rounded-lg space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-white truncate">{insight.url}</span>
+                  <div className="flex items-center gap-4">
+                    <span className="text-white/60 text-sm">{insight.traffic}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleUrlRemove(insight.url)}
+                      className="text-white/60 hover:text-red-500 transition-colors"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="border-t border-white/10 pt-3">
+                  <div className="text-sm text-white/60 mb-2">Common Pages:</div>
+                  <div className="flex flex-wrap gap-2">
+                    {insight.commonPages.map(page => (
+                      <span key={page} className="px-2 py-1 bg-white/10 rounded text-sm text-white">
+                        {page}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-t border-white/10 pt-3">
+                  <div className="text-sm text-white/60 mb-2">Top Keywords:</div>
+                  <div className="flex flex-wrap gap-2">
+                    {insight.topKeywords.map(keyword => (
+                      <span key={keyword} className="px-2 py-1 bg-sage-green/10 rounded text-sm text-white">
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         )}
-        <p className="text-white/60 text-sm">
-          Optional: Add URLs of websites you like or want to compete with.
-        </p>
+        <div className="flex items-center gap-2 text-white/60 text-sm">
+          <span className="text-sage-green">💡</span>
+          <p>
+            Lieutenant SEO will analyze competitors using SEMrush and Ahrefs data to suggest optimal page structure and keywords.
+          </p>
+        </div>
       </div>
 
       {/* Brand Keywords */}

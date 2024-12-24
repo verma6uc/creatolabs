@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { WizardData } from '../OnboardingWizard';
 
 type StepProps = {
@@ -71,6 +71,39 @@ const additionalPageOptions: PageOption[] = [
 
 export function StepPagesStructure({ data, setData, onNext, onPrev }: StepProps) {
   const [errors, setErrors] = useState('');
+  const [aiSuggestions, setAiSuggestions] = useState<{
+    competitorPages: Array<{
+      name: string;
+      frequency: number;
+      description: string;
+    }>;
+    loading: boolean;
+  }>({
+    competitorPages: [],
+    loading: true
+  });
+
+  // Simulate AI analysis of competitor pages
+  useEffect(() => {
+    const analyzeCompetitorPages = async () => {
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      setAiSuggestions({
+        competitorPages: [
+          { name: 'Features', frequency: 90, description: 'Showcase your product features' },
+          { name: 'Pricing', frequency: 85, description: 'Display pricing plans' },
+          { name: 'Blog', frequency: 75, description: 'Share industry insights' },
+          { name: 'FAQ', frequency: 70, description: 'Answer common questions' },
+          { name: 'Testimonials', frequency: 65, description: 'Show social proof' }
+        ],
+        loading: false
+      });
+    };
+
+    analyzeCompetitorPages();
+  }, []);
+
   const recommendedPages = getRecommendedPages(data.websitePurpose);
 
   const handlePageToggle = (pageId: string) => {
@@ -101,14 +134,47 @@ export function StepPagesStructure({ data, setData, onNext, onPrev }: StepProps)
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
+      {/* AI Analysis */}
+      <div className="space-y-4 mb-8">
+        <div className="flex justify-between items-center">
+          <label className="block text-white font-medium">
+            Lieutenant SEO&apos;s Analysis
+          </label>
+          <span className="text-white/60 text-sm">
+            Based on competitor data
+          </span>
+        </div>
+        
+        {aiSuggestions.loading ? (
+          <div className="text-white/60 text-center py-4">
+            Analyzing competitor page structures...
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {aiSuggestions.competitorPages.map((page) => (
+              <div
+                key={page.name}
+                className="p-4 bg-white/5 border border-white/10 rounded-lg"
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-white font-medium">{page.name}</h3>
+                  <span className="text-sage-green text-sm">{page.frequency}% of competitors</span>
+                </div>
+                <p className="text-white/60 text-sm">{page.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
       {/* Recommended Pages */}
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <label className="block text-white font-medium">
-            Recommended Pages
+            Captain SiteBuilder&apos;s Recommendations
           </label>
           <span className="text-white/60 text-sm">
-            Based on your website purpose
+            Based on your website purpose and competitor analysis
           </span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -160,9 +226,12 @@ export function StepPagesStructure({ data, setData, onNext, onPrev }: StepProps)
             </button>
           ))}
         </div>
-        <p className="text-white/60 text-sm">
-          Optional: Select any additional pages you&apos;d like to include.
-        </p>
+        <div className="flex items-center gap-2 text-white/60 text-sm">
+          <span className="text-sage-green">💡</span>
+          <p>
+            Pages are suggested based on competitor analysis and industry best practices. Click to add them to your site structure.
+          </p>
+        </div>
       </div>
 
       <div className="flex justify-between pt-8">

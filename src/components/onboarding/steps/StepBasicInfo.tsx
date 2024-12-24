@@ -15,6 +15,28 @@ export function StepBasicInfo({ data, setData, onNext }: StepProps) {
     email: '',
     projectName: '',
   });
+  const [suggestions, setSuggestions] = useState<{
+    projectNames: string[];
+    showSuggestions: boolean;
+  }>({
+    projectNames: [
+      "Modern Coffee House",
+      "Tech Solutions Hub",
+      "Creative Portfolio",
+      "Fitness Studio Pro",
+      "Local Restaurant Guide"
+    ],
+    showSuggestions: false
+  });
+
+  const handleSuggestionClick = (name: string) => {
+    setData({ ...data, projectName: name });
+    setSuggestions(prev => ({ ...prev, showSuggestions: false }));
+  };
+
+  const showProjectSuggestions = () => {
+    setSuggestions(prev => ({ ...prev, showSuggestions: true }));
+  };
 
   useEffect(() => {
     console.log('StepBasicInfo mounted with data:', data);
@@ -87,9 +109,9 @@ export function StepBasicInfo({ data, setData, onNext }: StepProps) {
           name="email"
           value={data.email}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-white/5 border ${
-            errors.email ? 'border-red-500' : 'border-white/10'
-          } rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-sage-green transition-colors`}
+          className={`w-full px-4 py-3 bg-dark-bg border ${
+            errors.email ? 'border-red-500' : 'border-white/20'
+          } rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-sage-green focus:bg-dark-surface transition-colors`}
           placeholder="you@example.com"
         />
         {errors.email && (
@@ -104,20 +126,43 @@ export function StepBasicInfo({ data, setData, onNext }: StepProps) {
         <label htmlFor="projectName" className="block text-white font-medium">
           What would you like to call your website/project?
         </label>
-        <input
-          type="text"
-          id="projectName"
-          name="projectName"
-          value={data.projectName}
-          onChange={handleChange}
-          className={`w-full px-4 py-3 bg-white/5 border ${
-            errors.projectName ? 'border-red-500' : 'border-white/10'
-          } rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-sage-green transition-colors`}
-          placeholder="e.g., Artsy Portfolio, Coffee Shop Site"
-        />
+        <div className="relative">
+          <input
+            type="text"
+            id="projectName"
+            name="projectName"
+            value={data.projectName}
+            onChange={handleChange}
+            onFocus={showProjectSuggestions}
+            className={`w-full px-4 py-3 bg-dark-bg border ${
+              errors.projectName ? 'border-red-500' : 'border-white/20'
+            } rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-sage-green focus:bg-dark-surface transition-colors`}
+            placeholder="e.g., Artsy Portfolio, Coffee Shop Site"
+          />
+          {suggestions.showSuggestions && (
+            <div className="absolute z-10 w-full mt-1 bg-dark-surface border border-white/20 rounded-lg shadow-lg">
+              <div className="p-2 text-white/60 text-sm border-b border-white/10">
+                Captain SiteBuilder suggests:
+              </div>
+              {suggestions.projectNames.map((name) => (
+                <button
+                  key={name}
+                  onClick={() => handleSuggestionClick(name)}
+                  className="w-full px-4 py-2 text-left text-white hover:bg-sage-green/10 transition-colors"
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
         {errors.projectName && (
           <p className="text-red-500 text-sm mt-1">{errors.projectName}</p>
         )}
+        <p className="text-white/60 text-sm flex items-center gap-2">
+          <span className="text-sage-green">💡</span>
+          Click to see AI-suggested project names based on common website types
+        </p>
       </div>
 
       <div className="flex justify-end pt-8">

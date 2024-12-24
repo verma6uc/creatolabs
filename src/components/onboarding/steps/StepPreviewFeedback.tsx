@@ -42,13 +42,111 @@ const previewSections: PreviewSection[] = [
 export function StepPreviewFeedback({ data, onNext, onPrev }: StepProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [currentPreview, setCurrentPreview] = useState('layout');
+  const [aiSuggestions, setAiSuggestions] = useState<{
+    layout: Array<{
+      element: string;
+      suggestion: string;
+      impact: string;
+    }>;
+    design: Array<{
+      element: string;
+      suggestion: string;
+      impact: string;
+    }>;
+    content: Array<{
+      element: string;
+      suggestion: string;
+      impact: string;
+    }>;
+  }>({
+    layout: [],
+    design: [],
+    content: []
+  });
+  const [versions, setVersions] = useState<{
+    current: number;
+    history: Array<{
+      id: number;
+      timestamp: string;
+      changes: string[];
+    }>;
+  }>({
+    current: 1,
+    history: [
+      {
+        id: 1,
+        timestamp: new Date().toISOString(),
+        changes: ['Initial version']
+      }
+    ]
+  });
 
-  const handlePreviewGenerate = () => {
+  const handlePreviewGenerate = async () => {
     setIsGenerating(true);
-    // Simulate AI generation delay
-    setTimeout(() => {
-      setIsGenerating(false);
-    }, 2000);
+    
+    // Simulate AI analysis delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Simulate AI suggestions
+    setAiSuggestions({
+      layout: [
+        {
+          element: 'Navigation',
+          suggestion: 'Move the contact button to the top right for better visibility',
+          impact: 'Could improve conversion rates by 15%'
+        },
+        {
+          element: 'Hero Section',
+          suggestion: 'Add a clear call-to-action above the fold',
+          impact: 'Expected to increase engagement by 25%'
+        }
+      ],
+      design: [
+        {
+          element: 'Color Scheme',
+          suggestion: 'Increase contrast between background and text',
+          impact: 'Improves accessibility and readability'
+        },
+        {
+          element: 'Typography',
+          suggestion: 'Use larger font size for headlines',
+          impact: 'Better visual hierarchy and scannability'
+        }
+      ],
+      content: [
+        {
+          element: 'Value Proposition',
+          suggestion: 'Make the headline more action-oriented',
+          impact: 'Could improve user understanding and conversion'
+        },
+        {
+          element: 'Features Section',
+          suggestion: 'Add specific benefit statements to each feature',
+          impact: 'Helps users understand practical value'
+        }
+      ]
+    });
+
+    // Add new version to history
+    const newVersion = {
+      id: versions.current + 1,
+      timestamp: new Date().toISOString(),
+      changes: ['Updated layout based on AI suggestions', 'Improved content structure']
+    };
+
+    setVersions(prev => ({
+      current: prev.current + 1,
+      history: [...prev.history, newVersion]
+    }));
+
+    setIsGenerating(false);
+  };
+
+  const handleVersionRevert = (versionId: number) => {
+    setVersions(prev => ({
+      ...prev,
+      current: versionId
+    }));
   };
 
   const getPreviewContent = () => {
@@ -149,9 +247,60 @@ export function StepPreviewFeedback({ data, onNext, onPrev }: StepProps) {
         ))}
       </div>
 
-      {/* Preview Area */}
-      <div className="min-h-[400px] border border-white/10 rounded-lg p-6">
-        {getPreviewContent()}
+      {/* Version History */}
+      <div className="border border-white/10 rounded-lg p-4">
+        <h3 className="text-white font-medium mb-3">Version History</h3>
+        <div className="space-y-2">
+          {versions.history.map((version) => (
+            <div
+              key={version.id}
+              className={`p-3 rounded-lg flex items-center justify-between ${
+                version.id === versions.current
+                  ? 'bg-sage-green/20 border border-sage-green'
+                  : 'bg-white/5'
+              }`}
+            >
+              <div>
+                <div className="text-white text-sm mb-1">
+                  Version {version.id} - {new Date(version.timestamp).toLocaleString()}
+                </div>
+                <ul className="text-white/60 text-sm">
+                  {version.changes.map((change, i) => (
+                    <li key={i}>{change}</li>
+                  ))}
+                </ul>
+              </div>
+              {version.id !== versions.current && (
+                <button
+                  onClick={() => handleVersionRevert(version.id)}
+                  className="px-3 py-1 bg-white/5 rounded text-white text-sm hover:bg-white/10 transition-colors"
+                >
+                  Revert
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Preview Area with AI Suggestions */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="min-h-[400px] border border-white/10 rounded-lg p-6">
+          {getPreviewContent()}
+        </div>
+        
+        <div className="border border-white/10 rounded-lg p-6">
+          <h3 className="text-white font-medium mb-4">AI Suggestions</h3>
+          {aiSuggestions[currentPreview as keyof typeof aiSuggestions].map((suggestion, index) => (
+            <div key={index} className="mb-4 p-4 bg-white/5 rounded-lg">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-white font-medium">{suggestion.element}</h4>
+                <span className="text-sage-green text-sm">{suggestion.impact}</span>
+              </div>
+              <p className="text-white/80">{suggestion.suggestion}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="flex justify-between pt-8">
