@@ -2,20 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --sage-green: #8BA888;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-slate-900 via-dark-bg to-slate-900 text-white min-h-screen;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(139, 168, 136, 0.05), transparent 40%),
+      radial-gradient(circle at 0% 50%, rgba(97, 64, 81, 0.05), transparent 50%),
+      linear-gradient(180deg, var(--tw-gradient-stops));
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-sage-green text-white rounded-lg 
+    hover:bg-opacity-90 transition-all duration-300
+    focus:outline-none focus:ring-2 focus:ring-sage-green focus:ring-opacity-50;
+  }
+
+  .glass-card {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(31, 41, 55, 0.37);
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+    transform-origin: center;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, rgba(139, 168, 136, 0.6), rgba(255, 255, 255, 0.3), rgba(97, 64, 81, 0.6));
+    opacity: 0.5;
+    pointer-events: none;
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1rem;
+  }
+
+  .glass-card:hover::before {
+    @apply opacity-90 bg-white/5;
+  }
+
+  .glass-card::after {
+    content: '';
+    @apply absolute inset-0 border border-white/10 rounded-xl 
+    transition-all duration-300 backdrop-blur-[2px]
+    shadow-[inset_0_0_15px_rgba(139,168,136,0.1)]
+    bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0;
+  }
+
+  .glass-card:hover::after {
+    @apply border-white/20 opacity-100;
+  }
+
+  .glass-card img,
+  .glass-card svg {
+    @apply relative z-10 w-12 h-12 mb-6 brightness-125;
+  }
+
+  .glass-card h3 {
+    @apply text-2xl font-bold text-white mb-3 relative z-10
+    transition-all duration-500;
+  }
+
+  .glass-card p {
+    @apply text-white/80 relative z-10
+    transition-all duration-500;
+  }
+
+  .glass-card:hover {
+    transform: scale(1.02) translateY(-4px);
+    background-color: rgba(30, 41, 59, 0.5);
+    box-shadow: 0 12px 40px 0 rgba(139, 168, 136, 0.3);
+  }
+
+  .glass-card:hover h3 {
+    @apply text-sage-green-light transform -translate-y-0.5;
+  }
+
+  .glass-card:hover p {
+    @apply text-white transform -translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .glass-card img,
+  .glass-card svg {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover img,
+  .glass-card:hover svg {
+    transform: scale(1.1);
+    filter: brightness(150%);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(2deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

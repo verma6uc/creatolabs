@@ -20,6 +20,19 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Changelog
+
+### 2024-01-14
+- Enhanced glass card design:
+  - Added smooth transitions with cubic-bezier timing
+  - Improved spacing with consistent padding and margins
+  - Implemented subtle scale and lift effect on hover
+  - Enhanced text animations with color transitions
+  - Brightened icons with scale animation
+  - Refined gradient overlays and shadows
+  - Improved contrast between card elements
+  - Updated background to rich navy blue with subtle gradients
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
