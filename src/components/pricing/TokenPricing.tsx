@@ -25,10 +25,22 @@ const tokenBundles = [
 
 const tokenUsage = [
   {
-    feature: 'Advanced AI Rewrite',
-    tokens: 10,
-    description: 'Deep learning-powered content optimization',
+    feature: 'Content Calendar AI',
+    tokens: 15,
+    description: 'AI-generated content topics and scheduling',
     icon: '/icons/content-bot.svg'
+  },
+  {
+    feature: 'Link Building Bot',
+    tokens: 20,
+    description: 'Automated forum posts and community engagement',
+    icon: '/icons/share.svg'
+  },
+  {
+    feature: 'Connected Landing Pages',
+    tokens: 25,
+    description: 'Dynamic data integration and optimization',
+    icon: '/icons/evolution.svg'
   },
   {
     feature: 'Deep Competitor Analysis',
@@ -37,10 +49,10 @@ const tokenUsage = [
     icon: '/icons/analytics.svg'
   },
   {
-    feature: 'High-Frequency Updates',
-    tokens: 15,
-    description: 'Rapid layout and content optimization',
-    icon: '/icons/evolution.svg'
+    feature: 'Advanced AI Rewrite',
+    tokens: 10,
+    description: 'Deep learning-powered content optimization',
+    icon: '/icons/content-bot.svg'
   }
 ];
 
@@ -95,7 +107,7 @@ export function TokenPricing() {
 
         {/* Token Bundles */}
         <div className="max-w-4xl mx-auto mb-24">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tokenBundles.map((bundle, index) => (
               <div
                 key={bundle.amount}

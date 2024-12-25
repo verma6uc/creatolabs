@@ -11,7 +11,8 @@ const plans = [
     features: [
       'AI-Driven Layouts',
       'Dynamic Evolution (up to 10,000 visits/mo)',
-      'Competitor Snapshot',
+      'Basic Content Calendar',
+      'Manual Link Building',
       'Basic Analytics Integration'
     ],
     cta: 'Choose Base Warp',
@@ -24,8 +25,9 @@ const plans = [
     features: [
       'All Base Warp Features',
       'Dynamic Evolution (up to 50,000 visits/mo)',
-      'Advanced Competitor Tracking',
-      'Custom Domain & Branding',
+      'AI Content Calendar & Scheduling',
+      'Automated Link Building (Basic)',
+      'Connected Landing Pages',
       'Premium Support'
     ],
     cta: 'Choose Warp Speed',
@@ -39,7 +41,8 @@ const plans = [
     features: [
       'All Warp Speed Features',
       'Unlimited Visits',
-      'Deep Competitor Analytics',
+      'Advanced Content Marketing Suite',
+      'Full Link Building Automation',
       'Priority AI Customization',
       'Dedicated Account Manager'
     ],
@@ -53,8 +56,9 @@ const plans = [
     features: [
       'All Interstellar Features',
       'Multi-Brand Management',
-      'Custom Integrations',
-      'Unlimited Collaboration',
+      'Custom Data Integrations',
+      'Advanced Content Analytics',
+      'Unlimited Team Collaboration',
       'On-Site Training & Support'
     ],
     cta: 'Contact Us',
