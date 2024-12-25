@@ -1,8 +1,6 @@
 import { HeroSection } from '../components/home/HeroSection';
-import { TeaserSection } from '../components/home/TeaserSection';
-import { HighlightsSection } from '../components/home/HighlightsSection';
+import { StepsSection } from '../components/home/StepsSection';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
-import { MysterySection } from '../components/home/MysterySection';
 import { FinalCTASection } from '../components/home/FinalCTASection';
 
 export default function Home() {
@@ -12,10 +10,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-eggplant-dark via-dark-bg to-dark-surface" />
         <div className="relative">
           <HeroSection />
-          <TeaserSection />
-          <HighlightsSection />
+          <StepsSection />
           <TestimonialsSection />
-          <MysterySection />
           <FinalCTASection />
         </div>
       </div>

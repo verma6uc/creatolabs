@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 export const FinalCTASection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,66 +26,42 @@ export const FinalCTASection = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const pulseInterval = setInterval(() => {
-      if (buttonRef.current) {
-        buttonRef.current.classList.add('animate-pulse');
-        setTimeout(() => {
-          buttonRef.current?.classList.remove('animate-pulse');
-        }, 1000);
-      }
-    }, 3000);
-
-    return () => clearInterval(pulseInterval);
-  }, []);
-
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-bg to-dark-surface" />
-      <div className="absolute inset-0 pattern-bg opacity-10" />
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-sage-green/10 to-transparent rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-eggplant/10 to-transparent rounded-full blur-3xl animate-float-delayed" />
+    <section className="relative py-24 md:py-32 overflow-hidden bg-dark-bg">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-surface to-dark-bg opacity-50" />
+        <div className="absolute inset-0 bg-noise opacity-[0.15]" />
       </div>
       
-      <div 
-        ref={sectionRef}
-        className="relative z-10 container mx-auto px-4 opacity-0 translate-y-8"
-      >
-        <div className="glass-card max-w-4xl mx-auto p-8 md:p-12 rounded-2xl text-center backdrop-blur-lg bg-white/5 group hover:bg-white/10 transition-all duration-700 relative overflow-hidden">
-          {/* Background Gradients */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-sage-green/5 via-transparent to-eggplant/5" />
-          </div>
-
-          {/* Content */}
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6 group-hover:text-sage-green-light transition-colors duration-300">
-              The Curtain Call
+      <div className="relative z-10 container mx-auto px-4">
+        <div 
+          ref={sectionRef}
+          className="max-w-4xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-700"
+        >
+          <div className="bg-dark-surface border border-white/10 rounded-xl p-12 transition-all duration-500 hover:border-sage-green/20">
+            <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6">
+              Ready to Build Your Website?
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-10 group-hover:text-white transition-colors duration-300">
-              Step into the spotlight—let Creator Lab transform your vision into a living, breathing website.
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+              Join the future of web development. Let our AI create, optimize, and 
+              evolve your website while you focus on growing your business.
             </p>
-            <Link
-              ref={buttonRef}
-              href="/get-started"
-              className="btn-primary relative overflow-hidden group inline-block"
-            >
-              <span className="relative z-10">Start Building Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </Link>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
+              <Link
+                href="/get-started"
+                className="inline-block px-8 py-4 bg-sage-green hover:bg-sage-green-light rounded-lg text-white font-semibold shadow-lg transition-all duration-300"
+              >
+                Start Building Now
+              </Link>
+              <Link
+                href="/how-it-works"
+                className="inline-block px-8 py-4 bg-dark-bg border border-white/10 hover:border-sage-green/20 rounded-lg text-white font-semibold transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
-
-          {/* Hover Effects */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-sage-green/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-eggplant/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform translate-x-1/2 translate-y-1/2" />
-          </div>
-
-          {/* Card Border Glow */}
-          <div className="absolute inset-0 border border-white/5 rounded-2xl group-hover:border-white/20 transition-colors duration-700" />
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'gradient': 'gradient 8s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out 3s infinite',
@@ -39,6 +39,14 @@ const config: Config = {
         'shimmer': 'shimmer 2s infinite',
       },
       keyframes: {
+        'pulse-slow': {
+          '0%, 100%': {
+            opacity: '1',
+          },
+          '50%': {
+            opacity: '.5',
+          },
+        },
         gradient: {
           '0%, 100%': {
             'background-position': '0% 50%',
