@@ -9,12 +9,12 @@ const AnalyticsDashboardSVG = () => (
     <g>
       {/* Visitors */}
       <rect x="80" y="80" width="150" height="80" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
-      <text x="155" y="110" className="fill-white text-sm" textAnchor="middle">Visitors</text>
+      <text x="155" y="110" className="fill-white text-sm" textAnchor="middle">Unique Users</text>
       <text x="155" y="140" className="fill-sage-green text-lg font-bold" textAnchor="middle">12,458</text>
 
       {/* Engagement */}
       <rect x="250" y="80" width="150" height="80" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
-      <text x="325" y="110" className="fill-white text-sm" textAnchor="middle">Avg. Time</text>
+      <text x="325" y="110" className="fill-white text-sm" textAnchor="middle">Session Time</text>
       <text x="325" y="140" className="fill-sage-green text-lg font-bold" textAnchor="middle">2:45</text>
 
       {/* Conversion Rate */}
@@ -44,6 +44,35 @@ const AnalyticsDashboardSVG = () => (
           dur="4s" repeatCount="indefinite" />
       </path>
     </g>
+  </svg>
+);
+
+const AIAnalyticsPipelineSVG = () => (
+  <svg className="w-full h-auto my-8" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Data Collection Layer */}
+    <rect x="100" y="50" width="600" height="60" rx="8" className="fill-sage-green/20 stroke-sage-green" strokeWidth="2" />
+    <text x="400" y="85" className="fill-white text-sm" textAnchor="middle">Real-time Data Collection</text>
+    <text x="200" y="85" className="fill-white/60 text-xs" textAnchor="middle">User Events</text>
+    <text x="400" y="85" className="fill-white/60 text-xs" textAnchor="middle">Interactions</text>
+    <text x="600" y="85" className="fill-white/60 text-xs" textAnchor="middle">Conversions</text>
+
+    {/* Processing Layer */}
+    <rect x="100" y="120" width="600" height="60" rx="8" className="fill-sage-green/20 stroke-sage-green" strokeWidth="2" />
+    <text x="400" y="155" className="fill-white text-sm" textAnchor="middle">Neural Network Analysis</text>
+    <text x="200" y="155" className="fill-white/60 text-xs" textAnchor="middle">Pattern Detection</text>
+    <text x="400" y="155" className="fill-white/60 text-xs" textAnchor="middle">Behavior Analysis</text>
+    <text x="600" y="155" className="fill-white/60 text-xs" textAnchor="middle">Predictive Models</text>
+
+    {/* Optimization Layer */}
+    <rect x="100" y="190" width="600" height="60" rx="8" className="fill-sage-green/20 stroke-sage-green" strokeWidth="2" />
+    <text x="400" y="225" className="fill-white text-sm" textAnchor="middle">Automated Optimization</text>
+    <text x="200" y="225" className="fill-white/60 text-xs" textAnchor="middle">Layout Changes</text>
+    <text x="400" y="225" className="fill-white/60 text-xs" textAnchor="middle">Content Updates</text>
+    <text x="600" y="225" className="fill-white/60 text-xs" textAnchor="middle">UX Improvements</text>
+
+    {/* Connecting Lines */}
+    <path d="M400 110 L400 120" className="stroke-sage-green" strokeWidth="2" />
+    <path d="M400 180 L400 190" className="stroke-sage-green" strokeWidth="2" />
   </svg>
 );
 
@@ -125,19 +154,29 @@ export default function BlogPost() {
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold mt-4 mb-6">
             Measuring What Matters: Turning Clicks into Conversion Insights
           </h1>
-          <p className="text-xl text-white/80">
-            How AI transforms raw analytics into actionable improvements
+          <p className="text-xl text-white/80 mb-8">
+            A deep dive into how AI transforms raw analytics into actionable improvements
           </p>
+          <div className="flex items-center justify-center space-x-4">
+            <div className="text-white/80">
+              By <span className="text-sage-green">Vaibhav Verma</span>
+            </div>
+            <span className="text-white/40">|</span>
+            <div className="text-white/80">
+              Co-authored by <span className="text-sage-green">Sahil Gupta</span>
+            </div>
+          </div>
         </header>
 
         <div className="prose prose-lg prose-invert mx-auto space-y-12">
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Beyond Basic Analytics</h2>
             <p className="text-white/90 leading-relaxed">
-              &quot;At Microsoft,&quot; I (Vaibhav) share, &quot;we had access to incredible amounts of 
-              data, but turning that into actionable insights was a constant challenge. 
-              Teams would spend weeks analyzing reports, only to find that the insights 
-              were already outdated.&quot;
+              As the former lead of enterprise analytics at Microsoft, I (Vaibhav) experienced 
+              firsthand the limitations of traditional analytics. &quot;We had access to incredible 
+              amounts of data,&quot; I explain, &quot;but turning that into actionable insights was a 
+              constant challenge. Teams would spend weeks analyzing reports, only to find that 
+              the insights were already outdated.&quot;
             </p>
             
             <AnalyticsDashboardSVG />
@@ -145,27 +184,51 @@ export default function BlogPost() {
             <p className="text-white/90 leading-relaxed mt-4">
               Sahil adds, &quot;That&apos;s why we built our analytics engine differently. It doesn&apos;t 
               just collect data – it actively interprets patterns and suggests optimizations 
-              in real-time. It&apos;s like having a team of analysts working 24/7.&quot;
+              in real-time. This builds on our core 
+              <a href="/blog/dynamic-evolution-websites" className="text-sage-green hover:text-sage-green-light ml-1">
+                dynamic evolution technology
+              </a>.&quot;
             </p>
           </div>
 
           <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The AI Analytics Pipeline</h2>
+            <p className="text-white/90 leading-relaxed">
+              &quot;Our analytics system represents a fundamental shift in how we process user 
+              data,&quot; Sahil explains. &quot;We&apos;ve built a neural network that doesn&apos;t just track 
+              metrics – it understands user behavior patterns and predicts future trends.&quot;
+            </p>
+
+            <AIAnalyticsPipelineSVG />
+
+            <p className="text-white/90 leading-relaxed mt-4">
+              This advanced pipeline integrates with our 
+              <a href="/blog/nlp-website-copy" className="text-sage-green hover:text-sage-green-light ml-1">
+                NLP system
+              </a> 
+              to optimize both content and user experience based on real user behavior.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Visual Behavior Analysis</h2>
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Heatmaps & Click Tracking</h3>
+                <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Advanced Heatmapping</h3>
                 <p className="text-white/90 leading-relaxed">
                   &quot;Understanding user behavior isn&apos;t just about numbers,&quot; I explain. &quot;Our 
-                  AI creates dynamic heatmaps that show exactly how users interact with 
-                  your content. But more importantly, it identifies patterns that humans 
-                  might miss.&quot;
+                  AI creates dynamic heatmaps that show exactly how users interact with your 
+                  content. This data feeds directly into our 
+                  <a href="/blog/competitor-research-seo" className="text-sage-green hover:text-sage-green-light ml-1">
+                    competitive analysis system
+                  </a>.&quot;
                 </p>
               </div>
 
               <HeatmapVisualizationSVG />
 
               <div>
-                <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Funnel Optimization</h3>
+                <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Intelligent Funnel Analysis</h3>
                 <p className="text-white/90 leading-relaxed">
                   &quot;The real magic happens in the optimization,&quot; Sahil notes. &quot;Our AI 
                   doesn&apos;t just show you where users drop off – it proactively suggests 
@@ -178,29 +241,59 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
-            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Continuous Improvement</h2>
-            <p className="text-white/90 leading-relaxed">
-              &quot;One of our e-commerce clients,&quot; I share, &quot;was struggling with cart 
-              abandonment. Our AI identified that users were dropping off at shipping 
-              information. By automatically testing different form layouts and copy, we 
-              reduced abandonment by 35% in just two weeks.&quot;
-            </p>
-
-            <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, &quot;The system learns from every interaction across our entire 
-              platform. When it discovers an optimization that works well for one site, 
-              it can suggest similar improvements to others in the same industry. It&apos;s 
-              like having the collective wisdom of thousands of websites working for you.&quot;
-            </p>
+          <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Enterprise-Grade Features</h2>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Real-time Processing:</strong>
+                  <span className="text-white/90 ml-2">
+                    Advanced stream processing for instant insights on user behavior
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Predictive Analytics:</strong>
+                  <span className="text-white/90 ml-2">
+                    Machine learning models that anticipate user needs and behavior patterns
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Automated Optimization:</strong>
+                  <span className="text-white/90 ml-2">
+                    AI-driven improvements based on our 
+                    <a href="/blog/ai-transforming-web-design" className="text-sage-green hover:text-sage-green-light ml-1">
+                      neural design system
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Cross-Platform Learning:</strong>
+                  <span className="text-white/90 ml-2">
+                    Insights shared across our platform for faster optimization
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-sage-green/20 to-sage-green/5 rounded-xl p-8 border border-sage-green/30 shadow-lg">
-            <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Start Optimizing Today</h3>
+            <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Transform Your Analytics</h3>
             <p className="text-white/90 leading-relaxed mb-6">
-              Experience the power of AI-driven analytics and optimization. Our platform 
-              turns complex data into clear, actionable insights that continuously improve 
-              your website&apos;s performance.
+              Experience enterprise-grade analytics made accessible. With our 
+              <a href="/blog/token-based-pricing" className="text-sage-green hover:text-sage-green-light ml-1">
+                flexible pricing model
+              </a>, 
+              advanced analytics and optimization are available to businesses of all sizes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
@@ -213,7 +306,7 @@ export default function BlogPost() {
                 href="/features" 
                 className="inline-block bg-transparent text-sage-green px-8 py-4 rounded-lg border border-sage-green hover:bg-sage-green/10 transition-all duration-300 font-semibold text-center"
               >
-                Learn More
+                Explore Features
               </a>
             </div>
           </div>

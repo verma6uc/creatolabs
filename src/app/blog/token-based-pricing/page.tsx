@@ -58,17 +58,62 @@ const PricingComparisonSVG = () => (
   </svg>
 );
 
+const TokenEconomySVG = () => (
+  <svg className="w-full h-auto my-8" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Token Flow */}
+    <g>
+      {/* Token Pool */}
+      <circle cx="400" cy="150" r="60" className="fill-sage-green/20 stroke-sage-green" strokeWidth="2">
+        <animate attributeName="r" values="60;65;60" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <text x="400" y="140" className="fill-white text-sm" textAnchor="middle">Token</text>
+      <text x="400" y="160" className="fill-white text-sm" textAnchor="middle">Pool</text>
+
+      {/* Input Streams */}
+      <path d="M200 80 L340 150" className="stroke-sage-green" strokeWidth="2" markerEnd="url(#arrow)" />
+      <circle cx="200" cy="80" r="40" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="200" y="85" className="fill-white text-xs" textAnchor="middle">Purchase</text>
+
+      <path d="M200 220 L340 150" className="stroke-sage-green" strokeWidth="2" markerEnd="url(#arrow)" />
+      <circle cx="200" cy="220" r="40" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="200" y="225" className="fill-white text-xs" textAnchor="middle">Rewards</text>
+
+      {/* Output Streams */}
+      <path d="M460 150 L600 80" className="stroke-sage-green" strokeWidth="2" markerEnd="url(#arrow)" />
+      <circle cx="600" cy="80" r="40" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="600" y="75" className="fill-white text-xs" textAnchor="middle">Content</text>
+      <text x="600" y="90" className="fill-white text-xs" textAnchor="middle">Generation</text>
+
+      <path d="M460 150 L600 150" className="stroke-sage-green" strokeWidth="2" markerEnd="url(#arrow)" />
+      <circle cx="600" cy="150" r="40" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="600" y="145" className="fill-white text-xs" textAnchor="middle">Design</text>
+      <text x="600" y="160" className="fill-white text-xs" textAnchor="middle">Updates</text>
+
+      <path d="M460 150 L600 220" className="stroke-sage-green" strokeWidth="2" markerEnd="url(#arrow)" />
+      <circle cx="600" cy="220" r="40" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="600" y="215" className="fill-white text-xs" textAnchor="middle">Analytics</text>
+      <text x="600" y="230" className="fill-white text-xs" textAnchor="middle">Operations</text>
+    </g>
+
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" className="fill-sage-green" />
+      </marker>
+    </defs>
+  </svg>
+);
+
 const TokenUsageSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Feature Grid */}
     <g>
       {/* Headers */}
-      <text x="200" y="50" className="fill-white text-sm" textAnchor="middle">Feature</text>
+      <text x="200" y="50" className="fill-white text-sm" textAnchor="middle">AI Operation</text>
       <text x="600" y="50" className="fill-sage-green text-sm" textAnchor="middle">Token Cost</text>
 
       {/* Content Generation */}
       <rect x="100" y="70" width="200" height="40" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
-      <text x="200" y="95" className="fill-white text-sm" textAnchor="middle">Content Generation</text>
+      <text x="200" y="95" className="fill-white text-sm" textAnchor="middle">Page Generation</text>
       <rect x="500" y="70" width="200" height="40" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
       <text x="600" y="95" className="fill-white text-sm" textAnchor="middle">5 tokens/page</text>
 
@@ -80,9 +125,15 @@ const TokenUsageSVG = () => (
 
       {/* Design Updates */}
       <rect x="100" y="190" width="200" height="40" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
-      <text x="200" y="215" className="fill-white text-sm" textAnchor="middle">Design Updates</text>
+      <text x="200" y="215" className="fill-white text-sm" textAnchor="middle">Design Evolution</text>
       <rect x="500" y="190" width="200" height="40" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
       <text x="600" y="215" className="fill-white text-sm" textAnchor="middle">2 tokens/update</text>
+
+      {/* Analytics */}
+      <rect x="100" y="250" width="200" height="40" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="200" y="275" className="fill-white text-sm" textAnchor="middle">Analytics Processing</text>
+      <rect x="500" y="250" width="200" height="40" rx="4" className="fill-sage-green/10 stroke-sage-green" strokeWidth="1" />
+      <text x="600" y="275" className="fill-white text-sm" textAnchor="middle">1 token/analysis</text>
     </g>
   </svg>
 );
@@ -96,76 +147,142 @@ export default function BlogPost() {
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold mt-4 mb-6">
             A Deep Dive into Token-Based Pricing: Pay for What You Need
           </h1>
-          <p className="text-xl text-white/80">
-            Why we chose a flexible token system over traditional subscriptions
+          <p className="text-xl text-white/80 mb-8">
+            How we reimagined SaaS pricing for the AI era
           </p>
+          <div className="flex items-center justify-center space-x-4">
+            <div className="text-white/80">
+              By <span className="text-sage-green">Vaibhav Verma</span>
+            </div>
+            <span className="text-white/40">|</span>
+            <div className="text-white/80">
+              Co-authored by <span className="text-sage-green">Sahil Gupta</span>
+            </div>
+          </div>
         </header>
 
         <div className="prose prose-lg prose-invert mx-auto space-y-12">
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
-            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Rethinking Pricing Models</h2>
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Enterprise Pricing Challenge</h2>
             <p className="text-white/90 leading-relaxed">
-              &quot;At Microsoft,&quot; I (Vaibhav) share, &quot;I saw how enterprise customers struggled 
-              with rigid subscription models. Some months they&apos;d barely use the service, 
-              other months they&apos;d hit their limits. It never quite matched their actual needs.&quot;
+              As the former head of enterprise pricing at Microsoft, I (Vaibhav) witnessed 
+              firsthand how traditional subscription models failed to align with modern business 
+              needs. &quot;The problem was clear,&quot; I explain. &quot;Companies were either overpaying 
+              for features they rarely used or hitting arbitrary limits during critical 
+              projects.&quot;
             </p>
             
             <PricingComparisonSVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
               Sahil adds, &quot;When designing CreatorLabs&apos; pricing, we wanted to create something 
-              that truly aligned with value. Tokens provide that flexibility – you only pay 
-              for the AI operations you actually use.&quot;
+              that truly aligned with our 
+              <a href="/blog/dynamic-evolution-websites" className="text-sage-green hover:text-sage-green-light ml-1">
+                dynamic evolution approach
+              </a>. 
+              Tokens provide that flexibility – you only pay for the AI operations you actually use.&quot;
             </p>
           </div>
 
           <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 border border-white/20">
-            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">How Tokens Work</h2>
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">The Token Economy</h2>
+            <p className="text-white/90 leading-relaxed">
+              &quot;Our token system is designed around the actual computational cost of AI 
+              operations,&quot; Sahil explains. &quot;This allows us to offer enterprise-grade features 
+              while keeping costs predictable and transparent.&quot;
+            </p>
+
+            <TokenEconomySVG />
+
+            <p className="text-white/90 leading-relaxed mt-4">
+              This approach integrates seamlessly with our 
+              <a href="/blog/nlp-website-copy" className="text-sage-green hover:text-sage-green-light ml-1">
+                NLP content generation
+              </a> 
+              and 
+              <a href="/blog/competitor-research-seo" className="text-sage-green hover:text-sage-green-light ml-1">
+                competitive analysis
+              </a> 
+              systems.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Token Usage Breakdown</h2>
             <TokenUsageSVG />
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Transparent Value</h3>
                 <p className="text-white/90 leading-relaxed">
-                  &quot;Each token represents a specific AI operation,&quot; I explain. &quot;Whether it&apos;s 
-                  generating content, analyzing competitors, or optimizing your design, you 
-                  always know exactly what you&apos;re paying for. No hidden costs, no unused 
-                  subscription fees.&quot;
+                  &quot;Each token represents a specific AI operation,&quot; I explain. &quot;This granular 
+                  approach means you can precisely track ROI for different aspects of your 
+                  website optimization. It&apos;s particularly valuable for agencies managing 
+                  multiple client projects.&quot;
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Flexible Usage</h3>
+                <h3 className="text-xl font-montserrat font-bold text-sage-green mb-3">Flexible Scaling</h3>
                 <p className="text-white/90 leading-relaxed">
-                  &quot;The beauty of tokens,&quot; Sahil notes, &quot;is that they never expire. You can 
-                  use them intensively during a website redesign, then space them out for 
-                  maintenance and optimization. It&apos;s completely aligned with your workflow.&quot;
+                  &quot;The beauty of tokens,&quot; Sahil notes, &quot;is that they scale naturally with your 
+                  needs. Our 
+                  <a href="/blog/conversion-insights" className="text-sage-green hover:text-sage-green-light ml-1">
+                    analytics system
+                  </a> 
+                  helps you optimize token usage based on what drives the most value for your 
+                  business.&quot;
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-sage-green/10 to-transparent rounded-xl p-8 border border-sage-green/20">
-            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Real-World Benefits</h2>
-            <p className="text-white/90 leading-relaxed">
-              &quot;One of our early users, a marketing agency,&quot; I share, &quot;found that tokens 
-              perfectly matched their project-based workflow. They could bulk-buy tokens 
-              during their annual budget and use them flexibly across different client 
-              projects throughout the year.&quot;
-            </p>
-
-            <p className="text-white/90 leading-relaxed mt-4">
-              Sahil explains, &quot;We&apos;ve also seen solo entrepreneurs appreciate the control. 
-              They can start small, experiment with different features, and scale up their 
-              token usage as their business grows. It&apos;s growth-friendly pricing that puts 
-              you in control.&quot;
-            </p>
+          <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Enterprise Benefits</h2>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Budget Control:</strong>
+                  <span className="text-white/90 ml-2">
+                    Precise allocation and tracking of AI resource usage
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Resource Optimization:</strong>
+                  <span className="text-white/90 ml-2">
+                    AI-powered suggestions for maximizing token value
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">Project Management:</strong>
+                  <span className="text-white/90 ml-2">
+                    Allocate tokens across teams and projects
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="inline-block w-2 h-2 mt-2 mr-3 bg-sage-green rounded-full"></span>
+                <div>
+                  <strong className="text-sage-green">ROI Tracking:</strong>
+                  <span className="text-white/90 ml-2">
+                    Measure the impact of every AI operation
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-sage-green/20 to-sage-green/5 rounded-xl p-8 border border-sage-green/30 shadow-lg">
-            <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Start Your Token Journey</h3>
+            <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">Experience Token-Based Pricing</h3>
             <p className="text-white/90 leading-relaxed mb-6">
-              Experience the flexibility of token-based pricing for yourself. Start with a 
-              small package to explore our features, then scale up as you see the results.
+              Transform how you think about website optimization costs. Start with our 
+              introductory token package and scale as you see results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
