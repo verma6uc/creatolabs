@@ -2,10 +2,11 @@
 
 import BlogPostLayout from '../../../../components/blog/BlogPostLayout';
 
-interface CategoryPageProps {
+interface Props {
   params: {
     slug: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const categoryTitles: { [key: string]: string } = {
@@ -17,7 +18,7 @@ const categoryTitles: { [key: string]: string } = {
   'analytics': 'Analytics'
 };
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default function CategoryPage({ params, searchParams }: Props) {
   const categoryTitle = categoryTitles[params.slug] || params.slug;
 
   return (
