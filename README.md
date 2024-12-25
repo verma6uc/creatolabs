@@ -1,49 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CreatorLabs Website
+
+The official website for CreatorLabs, showcasing our AI-powered website creation platform.
+
+## Features
+
+- Modern, responsive design using Next.js 13 and Tailwind CSS
+- Dynamic blog system with categorization
+- Interactive AI simulation demonstrations
+- Comprehensive onboarding wizard
+- Token-based pricing system visualization
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/verma6uc/creatolabs.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+cd creatolabs
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js 13 app directory
+│   ├── blog/              # Blog posts and categories
+│   ├── features/          # Feature pages
+│   ├── about/             # About pages
+│   └── ...
+├── components/            # React components
+│   ├── blog/             # Blog-related components
+│   ├── features/         # Feature-related components
+│   ├── shared/           # Shared components
+│   └── ...
+└── types/                # TypeScript type definitions
+```
 
 ## Changelog
 
-### 2024-01-14
-- Enhanced glass card design:
-  - Added smooth transitions with cubic-bezier timing
-  - Improved spacing with consistent padding and margins
-  - Implemented subtle scale and lift effect on hover
-  - Enhanced text animations with color transitions
-  - Brightened icons with scale animation
-  - Refined gradient overlays and shadows
-  - Improved contrast between card elements
-  - Updated background to rich navy blue with subtle gradients
+### [1.2.0] - 2024-01-05
+- Added blog sidebar with search, categories, and newsletter signup
+- Created dynamic category pages for blog posts
+- Added BlogPostLayout component for consistent blog post styling
+- Updated all blog posts to use new layout system
+- Fixed blog post navigation and category links
 
-## Learn More
+### [1.1.0] - 2024-01-04
+- Added comprehensive blog section with AI-focused articles
+- Integrated Salesken experience into content
+- Improved mobile responsiveness
+- Enhanced typography and visual hierarchy
 
-To learn more about Next.js, take a look at the following resources:
+### [1.0.0] - 2024-01-03
+- Initial release
+- Core pages and components
+- Basic navigation and layout
+- Responsive design implementation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Copyright © 2024 CreatorLabs. All rights reserved.
