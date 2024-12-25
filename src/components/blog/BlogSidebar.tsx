@@ -8,6 +8,11 @@ interface BlogPost {
 
 const recentPosts: BlogPost[] = [
   {
+    title: "Why CreatorLabs Stands Apart: Our Vision for AI-Powered Web Development",
+    slug: "/blog/why-creatorlabs-stands-apart",
+    date: "December 18, 2024"
+  },
+  {
     title: "Token-Based Pricing: A New Era in Web Development Economics",
     slug: "/blog/token-based-pricing",
     date: "December 17, 2024"
@@ -26,21 +31,16 @@ const recentPosts: BlogPost[] = [
     title: "AI-Powered Conversion Insights: The Future of Web Analytics",
     slug: "/blog/conversion-insights",
     date: "December 13, 2024"
-  },
-  {
-    title: "AI-Driven Competitor Research and SEO",
-    slug: "/blog/competitor-research-seo",
-    date: "December 12, 2024"
   }
 ];
 
 const categories = [
-  { name: "AI Technology", count: 8 },
-  { name: "Web Development", count: 6 },
-  { name: "Design Innovation", count: 5 },
-  { name: "Business Strategy", count: 4 },
-  { name: "User Experience", count: 4 },
-  { name: "Analytics", count: 3 }
+  { name: "AI Technology", slug: "ai-technology", count: 8 },
+  { name: "Web Development", slug: "web-development", count: 6 },
+  { name: "Design Innovation", slug: "design-innovation", count: 5 },
+  { name: "Business Strategy", slug: "business-strategy", count: 4 },
+  { name: "User Experience", slug: "user-experience", count: 4 },
+  { name: "Analytics", slug: "analytics", count: 3 }
 ];
 
 export default function BlogSidebar() {
@@ -91,7 +91,7 @@ export default function BlogSidebar() {
           {categories.map((category, index) => (
             <a 
               key={index}
-              href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/blog/category/${category.slug}`}
               className="flex items-center justify-between group"
             >
               <span className="text-white/90 group-hover:text-sage-green transition-colors duration-200">
