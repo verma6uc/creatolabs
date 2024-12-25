@@ -56,14 +56,15 @@ export const HeroSection = () => {
           ref={titleRef}
           className="text-5xl md:text-7xl font-montserrat font-bold text-white mb-8 opacity-0 translate-y-8 transition-all duration-700"
         >
-          A New Dawn in<br />Website Creation
+          Enterprise Power,<br />AI Innovation
         </h1>
         
         <p 
           ref={subtitleRef}
           className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-12 opacity-0 translate-y-8 transition-all duration-700 delay-200"
         >
-          Empower your ideas with AI-driven site building that evolves at every click.
+          Transform your web presence with AI-driven evolution powered by enterprise-grade 
+          architecture and cutting-edge neural networks.
         </p>
 
         <div 
@@ -74,7 +75,7 @@ export const HeroSection = () => {
             href="/get-started"
             className="btn-primary relative overflow-hidden group"
           >
-            <span className="relative z-10">Get Started</span>
+            <span className="relative z-10">Start Your Evolution</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
           </Link>
 

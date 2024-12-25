@@ -6,29 +6,50 @@ import Image from 'next/image';
 interface Feature {
   title: string;
   description: string;
+  subFeatures: string[];
   icon: string;
 }
 
 const highlights: Feature[] = [
   {
-    title: 'AI-Driven Creation',
-    description: 'Get instant layouts and personalized copy—no coding, no stress.',
+    title: 'Neural Design Engine',
+    description: 'Enterprise-grade AI that understands your business context and adapts to user behavior.',
+    subFeatures: [
+      'Advanced architecture',
+      'Real-time adaptation',
+      'Context-aware design'
+    ],
     icon: '/icons/design-bot.svg'
   },
   {
-    title: 'Continuous Evolution',
-    description: 'Each click refines your site in real time, adapting layouts and content effortlessly.',
+    title: 'Autonomous Evolution',
+    description: 'Websites that learn and evolve using the same AI principles powering autonomous systems.',
+    subFeatures: [
+      'Continuous optimization',
+      'Behavioral analysis',
+      'Predictive updates'
+    ],
     icon: '/icons/evolution.svg'
   },
   {
-    title: 'Competitor Insights',
-    description: 'Stay on top by leveraging industry data and automated SEO suggestions.',
-    icon: '/icons/seo-bot.svg'
+    title: 'Enterprise Analytics',
+    description: 'Fortune 500-level insights and competitor analysis made accessible through AI automation.',
+    subFeatures: [
+      'Competitive tracking',
+      'Predictive metrics',
+      'Market analysis'
+    ],
+    icon: '/icons/analytics.svg'
   },
   {
-    title: 'Instant Analytics',
-    description: 'Built-in tracking and reporting—no extra plugins or setup needed.',
-    icon: '/icons/analytics.svg'
+    title: 'Adaptive Learning',
+    description: 'Advanced machine learning algorithms that optimize every aspect of your web presence.',
+    subFeatures: [
+      'Neural optimization',
+      'Pattern recognition',
+      'Smart automation'
+    ],
+    icon: '/icons/seo-bot.svg'
   }
 ];
 
@@ -78,10 +99,11 @@ export const HighlightsSection = () => {
           className="text-center mb-16 opacity-0 translate-y-8 transition-all duration-700"
         >
           <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6">
-            The Revelation
+            Enterprise Power Meets AI Innovation
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            A glimpse into the powers that make Creator Lab an unstoppable force in web design.
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Combining enterprise-grade architecture with cutting-edge neural networks 
+            to revolutionize web development.
           </p>
         </div>
 
@@ -122,9 +144,17 @@ export const HighlightsSection = () => {
                 <h3 className="text-xl font-montserrat font-bold text-white mb-4 transition-colors duration-300 group-hover:text-sage-green-light">
                   {highlight.title}
                 </h3>
-                <p className="text-white/90 transition-colors duration-300 group-hover:text-white">
+                <p className="text-white/90 transition-colors duration-300 group-hover:text-white mb-6">
                   {highlight.description}
                 </p>
+                <ul className="space-y-2">
+                  {highlight.subFeatures.map((feature) => (
+                    <li key={feature} className="flex items-center text-sm text-white/80">
+                      <span className="w-1.5 h-1.5 bg-sage-green rounded-full mr-2"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Hover Effects */}

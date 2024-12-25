@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: 'Vaibhav Verma',
     role: 'Co-Founder & CTO',
-    bio: 'Pioneering technologist with a vision for AI-driven product creation. Former CTO at Salesken and VP of Engineering at iSTAR, with deep expertise in conversational AI and scalable solutions. IIT Bombay alumnus leading the technical innovation of our platform.'
+    bio: 'Pioneering technologist with extensive experience in AI and enterprise software development. Former CTO at Salesken and VP of Engineering at iSTAR, where he led the development of cutting-edge conversational AI systems and scalable enterprise solutions. IIT Bombay alumnus with deep expertise in neural networks, machine learning, and autonomous systems.'
   }
 ];
 
@@ -69,7 +69,7 @@ export function FoundingTeam() {
             Our Founding Team
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Meet the visionaries behind Creator Lab—a team of innovators, engineers, and dreamers 
+            Meet the visionaries behind CreatorLabs—a team of innovators, engineers, and dreamers 
             united by a passion for AI-driven web evolution.
           </p>
         </div>
