@@ -31,6 +31,12 @@ const config: Config = {
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out 3s infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'spin-slow': 'spin 8s linear infinite',
+        'orbit': 'orbit 20s linear infinite',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'bounce-slow': 'bounce 3s infinite',
+        'moveRight': 'moveRight 2s linear infinite',
+        'shimmer': 'shimmer 2s infinite',
       },
       keyframes: {
         gradient: {
@@ -55,6 +61,48 @@ const config: Config = {
           },
           '100%': {
             boxShadow: '0 0 20px rgba(165, 194, 169, 0.4), 0 0 30px rgba(165, 194, 169, 0.2)',
+          },
+        },
+        orbit: {
+          '0%': {
+            transform: 'rotate(0deg) translateX(80px) rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg) translateX(80px) rotate(-360deg)',
+          },
+        },
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        moveRight: {
+          '0%': {
+            transform: 'translateX(-100%)',
+          },
+          '50%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
+        shimmer: {
+          '0%': {
+            transform: 'translateX(-100%)',
+            opacity: '0',
+          },
+          '20%, 80%': {
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'translateX(100%)',
+            opacity: '0',
           },
         },
       },

@@ -27,6 +27,13 @@ export function HeroSection() {
     return () => observer.disconnect();
   }, []);
 
+  const handleGetStarted = () => {
+    const simulationSection = document.getElementById('simulation');
+    if (simulationSection) {
+      simulationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center relative">
       <AnimatedBackground 
@@ -56,8 +63,12 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-12">
             Experience the future of website creation with our AI-driven platform that evolves with your needs.
           </p>
-          <button className="btn-primary text-lg">
-            Get Started
+          <button 
+            onClick={handleGetStarted}
+            className="btn-primary text-lg relative overflow-hidden group"
+          >
+            <span className="relative z-10">Start Simulation</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
           </button>
         </div>
       </div>

@@ -1,14 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SimulationHero } from './SimulationHero';
 import { LoadingOverlay } from './LoadingOverlay';
 import { MockLayouts } from './MockLayouts';
 import { AILogs } from './AILogs';
 import Link from 'next/link';
 
 type SimulationStep = 
-  | 'intro'
   | 'input'
   | 'analysis'
   | 'blueprint'
@@ -16,30 +14,31 @@ type SimulationStep =
   | 'evolution';
 
 export function AISimulation() {
-  const [currentStep, setCurrentStep] = useState<SimulationStep>('intro');
-  const [isLoading, setIsLoading] = useState(false);
+  const [currentStep, setCurrentStep] = useState<SimulationStep>('input');
+  const [isLoading, setIsLoading] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    if (!isLoading && currentStep !== 'intro') {
+    // Initial load
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setShowContent(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
       const timer = setTimeout(() => {
         setShowContent(true);
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [isLoading, currentStep]);
-
-  const handleStartSimulation = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      setCurrentStep('input');
-    }, 2000);
-  };
+  }, [isLoading]);
 
   const handleNextStep = () => {
-    const steps: SimulationStep[] = ['intro', 'input', 'analysis', 'blueprint', 'design', 'evolution'];
+    const steps: SimulationStep[] = ['input', 'analysis', 'blueprint', 'design', 'evolution'];
     const currentIndex = steps.indexOf(currentStep);
     if (currentIndex < steps.length - 1) {
       setShowContent(false);
@@ -63,12 +62,8 @@ export function AISimulation() {
     evolution: 'Step 5: Continuous Evolution',
   };
 
-  if (currentStep === 'intro') {
-    return <SimulationHero onStart={handleStartSimulation} />;
-  }
-
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-dark-bg/50 backdrop-blur-sm">
       {isLoading && <LoadingOverlay />}
       
       <div className="container mx-auto px-6 py-12">

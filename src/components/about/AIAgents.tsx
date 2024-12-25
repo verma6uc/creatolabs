@@ -5,28 +5,52 @@ import Image from 'next/image';
 
 const agents = [
   {
+    name: 'Admiral Planner',
+    role: 'Strategic Command',
+    description: 'Charts the overall course for your digital presence. Coordinates all AI agents and develops comprehensive growth strategies.',
+    icon: '/icons/dashboard.svg'
+  },
+  {
     name: 'Captain SiteBuilder',
     role: 'Core Structure & Design',
-    description: 'Oversees your site&apos;s core structure and design. Helps chart the initial blueprint and ensures your site remains on the right course.',
+    description: 'Oversees your site&apos;s core structure and design. Creates adaptive layouts that evolve with your business needs.',
     icon: '/icons/design-bot.svg'
   },
   {
     name: 'Commander Content',
-    role: 'Content Strategy',
-    description: 'Specializes in crafting high-impact copy and text prompts. Handles your website&apos;s voice, tone, and messaging like a pro.',
+    role: 'Content Operations',
+    description: 'Leads the content creation team. Orchestrates your brand voice across all channels and content types.',
     icon: '/icons/content-bot.svg'
+  },
+  {
+    name: 'Research Officer',
+    role: 'Market Intelligence',
+    description: 'Gathers and analyzes market trends, competitor strategies, and user preferences to inform site evolution.',
+    icon: '/icons/analytics.svg'
   },
   {
     name: 'Lieutenant SEO',
     role: 'Search Optimization',
-    description: 'Keeps a watchful eye on search rankings, competitor moves, and keywords. Optimizes your content for maximum visibility.',
+    description: 'Optimizes content for maximum visibility. Coordinates with Research Officer to target high-impact keywords and topics.',
     icon: '/icons/seo-bot.svg'
   },
   {
-    name: 'Analytics Officer',
-    role: 'Performance Tracking',
-    description: 'Monitors user behavior, engagement metrics, and site performance. Provides actionable insights for continuous improvement.',
-    icon: '/icons/analytics.svg'
+    name: 'Social Commander',
+    role: 'Community Engagement',
+    description: 'Manages your brand&apos;s presence across social platforms. Automates content distribution and community interaction.',
+    icon: '/icons/share.svg'
+  },
+  {
+    name: 'UX Engineer',
+    role: 'Experience Optimization',
+    description: 'Fine-tunes user journeys and interaction patterns. Ensures your site is intuitive and engaging across all devices.',
+    icon: '/icons/blueprint.svg'
+  },
+  {
+    name: 'Security Officer',
+    role: 'Protection & Compliance',
+    description: 'Maintains site security and data protection. Ensures compliance with privacy regulations and best practices.',
+    icon: '/icons/evolution.svg'
   }
 ];
 
@@ -81,17 +105,18 @@ export function AIAgents() {
           className="text-center mb-16 opacity-0 translate-y-8 transition-all duration-700"
         >
           <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-6">
-            Meet the AI Crew
+            Your AI Command Center
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Our resident AI &quot;officers&quot; guide you through every stage of building and evolving your website. 
-            Each plays a distinct role—just like a starship&apos;s crew.
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Meet your dedicated AI crew—a sophisticated team of specialized agents working in perfect harmony. 
+            From strategic planning to security, each agent brings unique capabilities to create and maintain 
+            your evolving digital presence.
           </p>
         </div>
 
         <div 
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
         >
           {agents.map((agent) => (
             <div
@@ -132,6 +157,14 @@ export function AIAgents() {
               <div className="absolute inset-0 border border-white/5 rounded-xl group-hover:border-white/20 transition-colors duration-700" />
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">
+            Together, these AI agents form a comprehensive system that not only builds your website 
+            but continuously evolves it based on real data, market trends, and user behavior. 
+            It&apos;s like having an entire digital marketing team working 24/7.
+          </p>
         </div>
       </div>
     </section>

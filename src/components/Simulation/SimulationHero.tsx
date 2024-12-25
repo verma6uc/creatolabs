@@ -1,11 +1,23 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export function SimulationHero({ onStart }: { onStart: () => void }) {
   const [isInitializing, setIsInitializing] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const agents = [
+    { icon: '/icons/dashboard.svg', name: 'Admiral Planner', delay: '0ms' },
+    { icon: '/icons/design-bot.svg', name: 'Captain SiteBuilder', delay: '100ms' },
+    { icon: '/icons/content-bot.svg', name: 'Commander Content', delay: '200ms' },
+    { icon: '/icons/analytics.svg', name: 'Research Officer', delay: '300ms' },
+    { icon: '/icons/seo-bot.svg', name: 'Lieutenant SEO', delay: '400ms' },
+    { icon: '/icons/share.svg', name: 'Social Commander', delay: '500ms' },
+    { icon: '/icons/blueprint.svg', name: 'UX Engineer', delay: '600ms' },
+    { icon: '/icons/evolution.svg', name: 'Security Officer', delay: '700ms' }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,7 +50,7 @@ export function SimulationHero({ onStart }: { onStart: () => void }) {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-[60vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-eggplant via-dark-bg to-dark-surface opacity-90" />
@@ -56,7 +68,7 @@ export function SimulationHero({ onStart }: { onStart: () => void }) {
         ref={contentRef}
         className="relative z-10 container mx-auto px-6"
       >
-        <div className="glass-card max-w-4xl mx-auto p-8 md:p-12 rounded-2xl text-center backdrop-blur-lg bg-white/5 group hover:bg-white/10 transition-all duration-700 opacity-0 translate-y-8">
+        <div className="glass-card max-w-5xl mx-auto p-8 md:p-12 rounded-2xl backdrop-blur-lg bg-white/5 group hover:bg-white/10 transition-all duration-700 opacity-0 translate-y-8">
           {/* Background Gradients */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-sage-green/5 via-transparent to-eggplant/5 rounded-2xl" />
@@ -64,23 +76,60 @@ export function SimulationHero({ onStart }: { onStart: () => void }) {
 
           {/* Content */}
           <div className="relative z-10">
-            <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-white mb-6">
-              Experience the Creation
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-white mb-6 text-center">
+              Your AI Command Center
             </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-12">
-              Watch our AI transform your vision into a dynamic website, 
-              step by step—right before your eyes.
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12 text-center">
+              Experience how our elite team of AI agents works in perfect harmony to transform your vision 
+              into a dynamic, evolving web presence. Each agent brings specialized expertise to create 
+              something truly extraordinary.
             </p>
-            <button
-              onClick={handleStart}
-              disabled={isInitializing}
-              className="btn-primary relative overflow-hidden group min-w-[200px]"
-            >
-              <span className="relative z-10">
-                {isInitializing ? 'Initializing AI...' : 'Start Simulation'}
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </button>
+
+            {/* AI Agents Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+              {agents.map((agent) => (
+                <div 
+                  key={agent.name}
+                  className="flex flex-col items-center group/agent"
+                  style={{ 
+                    animationDelay: agent.delay,
+                    animation: 'fadeIn 0.5s ease-out forwards'
+                  }}
+                >
+                  <div className="relative w-16 h-16 mb-3">
+                    <Image
+                      src={agent.icon}
+                      alt={agent.name}
+                      fill
+                      className="object-contain group-hover/agent:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-sage-green/10 to-transparent rounded-full opacity-0 group-hover/agent:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <p className="text-white/80 text-sm text-center group-hover/agent:text-sage-green transition-colors duration-300">
+                    {agent.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Action Button */}
+            <div className="text-center">
+              <button
+                onClick={handleStart}
+                disabled={isInitializing}
+                className="btn-primary relative overflow-hidden group min-w-[200px]"
+              >
+                <span className="relative z-10">
+                  {isInitializing ? 'Initializing Command Center...' : 'Start Simulation'}
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              </button>
+              {!isInitializing && (
+                <p className="text-white/60 text-sm mt-4">
+                  Watch our AI agents collaborate in real-time
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Card Border Glow */}
