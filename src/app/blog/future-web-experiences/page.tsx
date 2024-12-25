@@ -1,5 +1,7 @@
 'use client';
 
+import BlogPostLayout from '../../../components/blog/BlogPostLayout';
+
 const EmergingTechSVG = () => (
   <svg className="w-full h-auto my-8" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Central AI Hub */}
@@ -104,8 +106,8 @@ const InteractionFlowSVG = () => (
 
 export default function BlogPost() {
   return (
-    <article className="min-h-screen bg-dark-bg text-white py-16">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <BlogPostLayout>
+      <article className="max-w-4xl">
         <header className="text-center mb-16">
           <time className="text-sage-green text-sm font-medium">December 10, 2024</time>
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold mt-4 mb-6">
@@ -129,7 +131,7 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Beyond Traditional Interfaces</h2>
             <p className="text-white/90 leading-relaxed">
-              &quot;Having led AI initiatives at major tech companies,&quot; I (Sahil) explain, &quot;I've seen firsthand how 
+              &quot;Having led AI initiatives at major tech companies,&quot; I (Sahil) explain, &quot;I&apos;ve seen firsthand how 
               advanced machine learning systems can transform user experiences. Our 
               <a href="/blog/dynamic-evolution-websites" className="text-sage-green hover:text-sage-green-light ml-1">
                 neural evolution system
@@ -264,7 +266,7 @@ export default function BlogPost() {
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </BlogPostLayout>
   );
 }
