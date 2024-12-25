@@ -116,7 +116,7 @@ export default function BlogPost() {
           </p>
           <div className="flex items-center justify-center space-x-4">
             <div className="text-white/80">
-              By <span className="text-sage-green">Sahil Gupta</span>
+              By <span className="text-sage-green">Sahil Singh</span>
             </div>
             <span className="text-white/40">|</span>
             <div className="text-white/80">
@@ -129,8 +129,8 @@ export default function BlogPost() {
           <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-8 border border-sage-green/20 shadow-lg">
             <h2 className="text-3xl font-montserrat font-bold text-sage-green mb-6">Beyond Traditional Interfaces</h2>
             <p className="text-white/90 leading-relaxed">
-              &quot;My research in adaptive systems at MIT,&quot; I (Sahil) explain, &quot;revealed how 
-              AI could fundamentally change human-computer interaction. Our 
+              &quot;Having led AI initiatives at major tech companies,&quot; I (Sahil) explain, &quot;I've seen firsthand how 
+              advanced machine learning systems can transform user experiences. Our 
               <a href="/blog/dynamic-evolution-websites" className="text-sage-green hover:text-sage-green-light ml-1">
                 neural evolution system
               </a> 

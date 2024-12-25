@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: 'Sahil Singh',
     role: 'Co-Founder & CEO',
-    bio: 'Seasoned software executive with extensive experience in scaling SaaS companies. Previously led global sales at Branch and Salesken, with leadership roles at Zendesk and Oracle. Passionate about building high-performance teams and driving customer-centric growth.'
+    bio: 'Accomplished software executive with proven track record in scaling SaaS companies. Currently Vice President of Global Sales at Branch, previously scaled APAC operations. Led global sales at Salesken from 0 to multi-million revenue and $22M Series B. Former Head of Enterprise Sales at Zendesk, scaling India business to significant ACV, and Senior Business Manager at Oracle CX Cloud. Passionate about building high-performance teams and driving customer-centric growth.'
   },
   {
     name: 'Vaibhav Verma',

@@ -103,7 +103,7 @@ export default function BlogPost() {
             </div>
             <span className="text-white/40">|</span>
             <div className="text-white/80">
-              Co-authored by <span className="text-sage-green">Sahil Gupta</span>
+              Co-authored by <span className="text-sage-green">Sahil Singh</span>
             </div>
           </div>
         </header>
@@ -122,9 +122,9 @@ export default function BlogPost() {
             <JourneySVG />
             
             <p className="text-white/90 leading-relaxed mt-4">
-              Sahil, with his background in AI research at leading institutions, adds, &quot;The launch 
+              Sahil, with his extensive experience leading AI initiatives at major tech companies, adds, &quot;The launch 
               of CreatorLabs represents more than just a new platform – it&apos;s the culmination of 
-              our combined experiences in enterprise software and AI research. We&apos;ve built something 
+              our combined expertise in enterprise software and practical AI applications. We&apos;ve built something 
               that fundamentally changes how websites are created and maintained.&quot;
             </p>
 
