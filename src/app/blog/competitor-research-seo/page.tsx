@@ -1,9 +1,11 @@
 'use client';
 
+import BlogPostLayout from '../../../components/blog/BlogPostLayout';
+
 export default function BlogPost() {
   return (
-    <article className="min-h-screen bg-dark-bg text-white py-16">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <BlogPostLayout>
+      <article className="max-w-4xl">
         <header className="text-center mb-16">
           <time className="text-sage-green text-sm font-medium">December 12, 2024</time>
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold mt-4 mb-6">
@@ -146,7 +148,7 @@ export default function BlogPost() {
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </BlogPostLayout>
   );
 }

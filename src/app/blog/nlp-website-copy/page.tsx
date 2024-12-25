@@ -1,9 +1,11 @@
 'use client';
 
+import BlogPostLayout from '../../../components/blog/BlogPostLayout';
+
 export default function BlogPost() {
   return (
-    <article className="min-h-screen bg-dark-bg text-white py-16">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <BlogPostLayout>
+      <article className="max-w-4xl">
         <header className="text-center mb-16">
           <time className="text-sage-green text-sm font-medium">December 16, 2024</time>
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold mt-4 mb-6">
@@ -127,10 +129,10 @@ export default function BlogPost() {
           <div className="mt-12 bg-gradient-to-br from-sage-green/20 to-sage-green/5 rounded-xl p-8 border border-sage-green/30 shadow-lg">
             <h3 className="text-2xl font-montserrat font-bold text-sage-green mb-4">The Path Forward</h3>
             <p className="text-white/90 leading-relaxed">
-              &quot;At Salesken, we pushed the boundaries of what AI could do with language 
-              understanding and generation,&quot; I reflect. &quot;With CreatorLabs, we&apos;re taking 
-              those same advanced NLP capabilities and applying them to web content creation, 
-              making enterprise-grade content generation accessible to businesses of all sizes.&quot;
+              &quot;At Salesken, we pushed the boundaries of what AI could understand about user 
+              behavior and intent,&quot; I reflect. &quot;With CreatorLabs, we&apos;re taking those same 
+              advanced capabilities and applying them to web content creation, making enterprise-grade 
+              content generation accessible to everyone.&quot;
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a 
@@ -148,7 +150,7 @@ export default function BlogPost() {
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </BlogPostLayout>
   );
 }
